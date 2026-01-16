@@ -1,0 +1,537 @@
+{
+  "exercises": [
+    {
+      "id": "push_ups",
+      "name": "Push-Ups",
+      "muscleGroup": "chest",
+      "sets": 3,
+      "reps": 12,
+      "restSeconds": 60,
+      "instructions": "Start in a plank position with hands shoulder-width apart. Lower your body until your chest nearly touches the floor. Push back up to the starting position.",
+      "alternatives": ["knee_push_ups", "incline_push_ups", "wall_push_ups"],
+      "contraindications": ["shoulder_issues"]
+    },
+    {
+      "id": "knee_push_ups",
+      "name": "Knee Push-Ups",
+      "muscleGroup": "chest",
+      "sets": 3,
+      "reps": 15,
+      "restSeconds": 60,
+      "instructions": "Start on your hands and knees. Lower your chest toward the floor while keeping your back straight. Push back up.",
+      "alternatives": ["push_ups", "wall_push_ups"]
+    },
+    {
+      "id": "incline_push_ups",
+      "name": "Incline Push-Ups",
+      "muscleGroup": "chest",
+      "sets": 3,
+      "reps": 12,
+      "restSeconds": 60,
+      "instructions": "Place hands on an elevated surface. Perform a push-up while keeping your body straight.",
+      "alternatives": ["push_ups", "knee_push_ups"]
+    },
+    {
+      "id": "wall_push_ups",
+      "name": "Wall Push-Ups",
+      "muscleGroup": "chest",
+      "sets": 3,
+      "reps": 15,
+      "restSeconds": 45,
+      "instructions": "Stand arm's length from a wall. Place hands on the wall and perform a push-up motion.",
+      "alternatives": ["incline_push_ups", "knee_push_ups"]
+    },
+    {
+      "id": "diamond_push_ups",
+      "name": "Diamond Push-Ups",
+      "muscleGroup": "arms",
+      "sets": 3,
+      "reps": 10,
+      "restSeconds": 60,
+      "instructions": "Form a diamond shape with your hands under your chest. Perform a push-up keeping elbows close to your body.",
+      "alternatives": ["tricep_dips", "close_grip_push_ups"],
+      "contraindications": ["shoulder_issues", "wrist_issues"]
+    },
+    {
+      "id": "bodyweight_squats",
+      "name": "Bodyweight Squats",
+      "muscleGroup": "legs",
+      "sets": 3,
+      "reps": 15,
+      "restSeconds": 60,
+      "instructions": "Stand with feet shoulder-width apart. Lower your body as if sitting back into a chair. Keep your chest up and knees over toes. Return to standing.",
+      "alternatives": ["wall_sit", "chair_squats"],
+      "contraindications": ["knee_issues"]
+    },
+    {
+      "id": "wall_sit",
+      "name": "Wall Sit",
+      "muscleGroup": "legs",
+      "sets": 3,
+      "reps": 0,
+      "durationSeconds": 30,
+      "restSeconds": 60,
+      "instructions": "Lean against a wall with your thighs parallel to the ground. Hold this position.",
+      "alternatives": ["bodyweight_squats", "chair_squats"]
+    },
+    {
+      "id": "lunges",
+      "name": "Lunges",
+      "muscleGroup": "legs",
+      "sets": 3,
+      "reps": 12,
+      "restSeconds": 60,
+      "instructions": "Step forward with one leg and lower your hips until both knees are bent at 90 degrees. Push back to start and alternate legs.",
+      "alternatives": ["reverse_lunges", "step_ups"],
+      "contraindications": ["knee_issues", "hip_issues"]
+    },
+    {
+      "id": "reverse_lunges",
+      "name": "Reverse Lunges",
+      "muscleGroup": "legs",
+      "sets": 3,
+      "reps": 12,
+      "restSeconds": 60,
+      "instructions": "Step backward with one leg and lower your hips. Push through your front foot to return to standing.",
+      "alternatives": ["lunges", "step_ups"]
+    },
+    {
+      "id": "step_ups",
+      "name": "Step-Ups",
+      "muscleGroup": "legs",
+      "sets": 3,
+      "reps": 10,
+      "restSeconds": 60,
+      "instructions": "Step onto an elevated platform with one foot, then bring the other foot up. Step back down and alternate.",
+      "alternatives": ["lunges", "bodyweight_squats"]
+    },
+    {
+      "id": "glute_bridges",
+      "name": "Glute Bridges",
+      "muscleGroup": "legs",
+      "sets": 3,
+      "reps": 15,
+      "restSeconds": 45,
+      "instructions": "Lie on your back with knees bent and feet flat. Lift your hips toward the ceiling, squeezing your glutes at the top.",
+      "alternatives": ["single_leg_bridges", "hip_thrusts"]
+    },
+    {
+      "id": "single_leg_bridges",
+      "name": "Single Leg Glute Bridges",
+      "muscleGroup": "legs",
+      "sets": 3,
+      "reps": 10,
+      "restSeconds": 45,
+      "instructions": "Perform a glute bridge with one leg extended straight out. Alternate legs.",
+      "alternatives": ["glute_bridges"]
+    },
+    {
+      "id": "plank",
+      "name": "Plank",
+      "muscleGroup": "core",
+      "sets": 3,
+      "reps": 0,
+      "durationSeconds": 30,
+      "restSeconds": 45,
+      "instructions": "Hold a push-up position with your arms straight or on your forearms. Keep your body in a straight line from head to heels.",
+      "alternatives": ["side_plank", "dead_bug"],
+      "contraindications": ["back_issues"]
+    },
+    {
+      "id": "side_plank",
+      "name": "Side Plank",
+      "muscleGroup": "core",
+      "sets": 3,
+      "reps": 0,
+      "durationSeconds": 20,
+      "restSeconds": 30,
+      "instructions": "Lie on your side and prop yourself up on one forearm. Lift your hips to form a straight line. Hold, then switch sides.",
+      "alternatives": ["plank", "dead_bug"]
+    },
+    {
+      "id": "dead_bug",
+      "name": "Dead Bug",
+      "muscleGroup": "core",
+      "sets": 3,
+      "reps": 10,
+      "restSeconds": 45,
+      "instructions": "Lie on your back with arms extended toward the ceiling and knees bent at 90 degrees. Lower opposite arm and leg toward the floor, then return and alternate.",
+      "alternatives": ["plank", "bird_dog"]
+    },
+    {
+      "id": "bird_dog",
+      "name": "Bird Dog",
+      "muscleGroup": "core",
+      "sets": 3,
+      "reps": 10,
+      "restSeconds": 45,
+      "instructions": "Start on hands and knees. Extend opposite arm and leg simultaneously. Hold briefly, return, and alternate.",
+      "alternatives": ["dead_bug", "plank"]
+    },
+    {
+      "id": "mountain_climbers",
+      "name": "Mountain Climbers",
+      "muscleGroup": "full_body",
+      "sets": 3,
+      "reps": 0,
+      "durationSeconds": 30,
+      "restSeconds": 45,
+      "instructions": "Start in a plank position. Quickly alternate driving your knees toward your chest.",
+      "alternatives": ["high_knees", "burpees"]
+    },
+    {
+      "id": "burpees",
+      "name": "Burpees",
+      "muscleGroup": "full_body",
+      "sets": 3,
+      "reps": 8,
+      "restSeconds": 60,
+      "instructions": "From standing, drop into a squat, kick your feet back into a plank, perform a push-up, jump feet forward, and jump up with arms overhead.",
+      "alternatives": ["mountain_climbers", "squat_jumps"],
+      "contraindications": ["knee_issues", "back_issues", "shoulder_issues"]
+    },
+    {
+      "id": "squat_jumps",
+      "name": "Squat Jumps",
+      "muscleGroup": "legs",
+      "sets": 3,
+      "reps": 10,
+      "restSeconds": 60,
+      "instructions": "Perform a squat, then explode upward into a jump. Land softly and immediately go into the next squat.",
+      "alternatives": ["bodyweight_squats"],
+      "contraindications": ["knee_issues"]
+    },
+    {
+      "id": "high_knees",
+      "name": "High Knees",
+      "muscleGroup": "full_body",
+      "sets": 3,
+      "reps": 0,
+      "durationSeconds": 30,
+      "restSeconds": 45,
+      "instructions": "Run in place while driving your knees as high as possible. Pump your arms to match the rhythm.",
+      "alternatives": ["mountain_climbers", "jumping_jacks"]
+    },
+    {
+      "id": "jumping_jacks",
+      "name": "Jumping Jacks",
+      "muscleGroup": "full_body",
+      "sets": 3,
+      "reps": 0,
+      "durationSeconds": 30,
+      "restSeconds": 30,
+      "instructions": "Jump while spreading your legs and raising your arms overhead. Jump back to starting position.",
+      "alternatives": ["high_knees", "mountain_climbers"]
+    },
+    {
+      "id": "tricep_dips",
+      "name": "Tricep Dips",
+      "muscleGroup": "arms",
+      "sets": 3,
+      "reps": 12,
+      "restSeconds": 60,
+      "instructions": "Place hands on a chair or bench behind you. Lower your body by bending your elbows, then push back up.",
+      "alternatives": ["diamond_push_ups"],
+      "contraindications": ["shoulder_issues"]
+    },
+    {
+      "id": "superman",
+      "name": "Superman",
+      "muscleGroup": "back",
+      "sets": 3,
+      "reps": 12,
+      "restSeconds": 45,
+      "instructions": "Lie face down with arms extended. Lift your arms, chest, and legs off the ground simultaneously. Hold briefly, then lower.",
+      "alternatives": ["bird_dog", "reverse_snow_angels"]
+    },
+    {
+      "id": "reverse_snow_angels",
+      "name": "Reverse Snow Angels",
+      "muscleGroup": "back",
+      "sets": 3,
+      "reps": 10,
+      "restSeconds": 45,
+      "instructions": "Lie face down with arms by your sides. Lift your chest and sweep your arms in an arc from hips to overhead.",
+      "alternatives": ["superman"]
+    },
+    {
+      "id": "calf_raises",
+      "name": "Calf Raises",
+      "muscleGroup": "legs",
+      "sets": 3,
+      "reps": 15,
+      "restSeconds": 30,
+      "instructions": "Stand on the edge of a step with heels hanging off. Rise up on your toes, then lower back down below the step level.",
+      "alternatives": ["single_leg_calf_raises"]
+    },
+    {
+      "id": "bicycle_crunches",
+      "name": "Bicycle Crunches",
+      "muscleGroup": "core",
+      "sets": 3,
+      "reps": 15,
+      "restSeconds": 45,
+      "instructions": "Lie on your back with hands behind your head. Bring opposite elbow to opposite knee while extending the other leg. Alternate in a pedaling motion.",
+      "alternatives": ["dead_bug", "russian_twists"]
+    },
+    {
+      "id": "russian_twists",
+      "name": "Russian Twists",
+      "muscleGroup": "core",
+      "sets": 3,
+      "reps": 12,
+      "restSeconds": 45,
+      "instructions": "Sit with knees bent and feet off the floor. Lean back slightly and rotate your torso side to side, touching the ground beside you.",
+      "alternatives": ["bicycle_crunches", "side_plank"]
+    },
+    {
+      "id": "dumbbell_rows",
+      "name": "Dumbbell Rows",
+      "muscleGroup": "back",
+      "sets": 3,
+      "reps": 12,
+      "restSeconds": 60,
+      "instructions": "Hinge forward at the hips with a dumbbell in one hand. Pull the weight up to your ribcage, squeezing your shoulder blade. Lower and repeat.",
+      "alternatives": ["superman", "resistance_band_rows"]
+    },
+    {
+      "id": "dumbbell_shoulder_press",
+      "name": "Dumbbell Shoulder Press",
+      "muscleGroup": "shoulders",
+      "sets": 3,
+      "reps": 10,
+      "restSeconds": 60,
+      "instructions": "Hold dumbbells at shoulder height. Press them overhead until arms are fully extended. Lower back to shoulders.",
+      "alternatives": ["pike_push_ups"],
+      "contraindications": ["shoulder_issues"]
+    },
+    {
+      "id": "pike_push_ups",
+      "name": "Pike Push-Ups",
+      "muscleGroup": "shoulders",
+      "sets": 3,
+      "reps": 10,
+      "restSeconds": 60,
+      "instructions": "Start in a downward dog position. Bend your elbows to lower your head toward the floor, then push back up.",
+      "alternatives": ["dumbbell_shoulder_press"],
+      "contraindications": ["shoulder_issues"]
+    },
+    {
+      "id": "dumbbell_bicep_curls",
+      "name": "Dumbbell Bicep Curls",
+      "muscleGroup": "arms",
+      "sets": 3,
+      "reps": 12,
+      "restSeconds": 45,
+      "instructions": "Hold dumbbells at your sides with palms facing forward. Curl the weights up toward your shoulders, then lower slowly.",
+      "alternatives": ["resistance_band_curls"]
+    },
+    {
+      "id": "goblet_squats",
+      "name": "Goblet Squats",
+      "muscleGroup": "legs",
+      "sets": 3,
+      "reps": 12,
+      "restSeconds": 60,
+      "instructions": "Hold a dumbbell or kettlebell at chest level. Perform a squat while keeping your chest up and the weight close to your body.",
+      "alternatives": ["bodyweight_squats"],
+      "contraindications": ["knee_issues"]
+    },
+    {
+      "id": "cat_cow",
+      "name": "Cat-Cow Stretch",
+      "muscleGroup": "back",
+      "sets": 1,
+      "reps": 10,
+      "restSeconds": 0,
+      "instructions": "On hands and knees, alternate between arching your back (cow) and rounding it (cat). Move slowly and breathe deeply."
+    },
+    {
+      "id": "childs_pose",
+      "name": "Child's Pose",
+      "muscleGroup": "back",
+      "sets": 1,
+      "reps": 0,
+      "durationSeconds": 60,
+      "restSeconds": 0,
+      "instructions": "Kneel and sit back on your heels. Stretch your arms forward on the floor and rest your forehead down. Breathe deeply."
+    },
+    {
+      "id": "downward_dog",
+      "name": "Downward Dog",
+      "muscleGroup": "full_body",
+      "sets": 1,
+      "reps": 0,
+      "durationSeconds": 45,
+      "restSeconds": 0,
+      "instructions": "Form an inverted V with your body. Press your hands and feet into the floor while lifting your hips high."
+    }
+  ],
+  "workouts": [
+    {
+      "id": "full_body_beginner",
+      "name": "Full Body Basics",
+      "category": "strength",
+      "durationMinutes": 20,
+      "difficulty": "beginner",
+      "equipmentRequired": [],
+      "estimatedCalories": 150,
+      "exercises": ["bodyweight_squats", "knee_push_ups", "glute_bridges", "plank", "bird_dog"],
+      "thumbnailUrl": null
+    },
+    {
+      "id": "full_body_intermediate",
+      "name": "Full Body Power",
+      "category": "strength",
+      "durationMinutes": 30,
+      "difficulty": "intermediate",
+      "equipmentRequired": [],
+      "estimatedCalories": 220,
+      "exercises": ["bodyweight_squats", "push_ups", "lunges", "plank", "mountain_climbers", "tricep_dips", "superman"],
+      "thumbnailUrl": null
+    },
+    {
+      "id": "full_body_advanced",
+      "name": "Full Body Challenge",
+      "category": "strength",
+      "durationMinutes": 40,
+      "difficulty": "advanced",
+      "equipmentRequired": [],
+      "estimatedCalories": 320,
+      "exercises": ["squat_jumps", "diamond_push_ups", "lunges", "burpees", "side_plank", "mountain_climbers", "superman", "bicycle_crunches"],
+      "thumbnailUrl": null
+    },
+    {
+      "id": "hiit_beginner",
+      "name": "HIIT Starter",
+      "category": "hiit",
+      "durationMinutes": 15,
+      "difficulty": "beginner",
+      "equipmentRequired": [],
+      "estimatedCalories": 120,
+      "exercises": ["jumping_jacks", "bodyweight_squats", "high_knees", "glute_bridges"],
+      "thumbnailUrl": null
+    },
+    {
+      "id": "hiit_intermediate",
+      "name": "HIIT Burn",
+      "category": "hiit",
+      "durationMinutes": 20,
+      "difficulty": "intermediate",
+      "equipmentRequired": [],
+      "estimatedCalories": 200,
+      "exercises": ["jumping_jacks", "mountain_climbers", "squat_jumps", "high_knees", "plank"],
+      "thumbnailUrl": null
+    },
+    {
+      "id": "hiit_advanced",
+      "name": "HIIT Inferno",
+      "category": "hiit",
+      "durationMinutes": 25,
+      "difficulty": "advanced",
+      "equipmentRequired": [],
+      "estimatedCalories": 280,
+      "exercises": ["burpees", "mountain_climbers", "squat_jumps", "high_knees", "diamond_push_ups", "jumping_jacks"],
+      "thumbnailUrl": null
+    },
+    {
+      "id": "core_beginner",
+      "name": "Core Foundation",
+      "category": "core",
+      "durationMinutes": 15,
+      "difficulty": "beginner",
+      "equipmentRequired": [],
+      "estimatedCalories": 80,
+      "exercises": ["dead_bug", "glute_bridges", "bird_dog", "plank"],
+      "thumbnailUrl": null
+    },
+    {
+      "id": "core_intermediate",
+      "name": "Core Strength",
+      "category": "core",
+      "durationMinutes": 20,
+      "difficulty": "intermediate",
+      "equipmentRequired": [],
+      "estimatedCalories": 120,
+      "exercises": ["plank", "side_plank", "bicycle_crunches", "dead_bug", "mountain_climbers"],
+      "thumbnailUrl": null
+    },
+    {
+      "id": "core_advanced",
+      "name": "Core Crusher",
+      "category": "core",
+      "durationMinutes": 25,
+      "difficulty": "advanced",
+      "equipmentRequired": [],
+      "estimatedCalories": 160,
+      "exercises": ["plank", "side_plank", "bicycle_crunches", "russian_twists", "mountain_climbers", "burpees"],
+      "thumbnailUrl": null
+    },
+    {
+      "id": "yoga_morning",
+      "name": "Morning Flow",
+      "category": "yoga",
+      "durationMinutes": 15,
+      "difficulty": "beginner",
+      "equipmentRequired": [],
+      "estimatedCalories": 60,
+      "exercises": ["cat_cow", "downward_dog", "childs_pose", "bird_dog"],
+      "thumbnailUrl": null
+    },
+    {
+      "id": "yoga_flexibility",
+      "name": "Flexibility Flow",
+      "category": "yoga",
+      "durationMinutes": 25,
+      "difficulty": "intermediate",
+      "equipmentRequired": [],
+      "estimatedCalories": 90,
+      "exercises": ["cat_cow", "downward_dog", "childs_pose", "bird_dog", "glute_bridges"],
+      "thumbnailUrl": null
+    },
+    {
+      "id": "upper_body_strength",
+      "name": "Upper Body Focus",
+      "category": "strength",
+      "durationMinutes": 25,
+      "difficulty": "intermediate",
+      "equipmentRequired": ["dumbbells"],
+      "estimatedCalories": 180,
+      "exercises": ["push_ups", "dumbbell_rows", "dumbbell_shoulder_press", "dumbbell_bicep_curls", "tricep_dips", "plank"],
+      "thumbnailUrl": null
+    },
+    {
+      "id": "lower_body_strength",
+      "name": "Lower Body Focus",
+      "category": "strength",
+      "durationMinutes": 25,
+      "difficulty": "intermediate",
+      "equipmentRequired": ["dumbbells"],
+      "estimatedCalories": 200,
+      "exercises": ["goblet_squats", "lunges", "glute_bridges", "calf_raises", "wall_sit"],
+      "thumbnailUrl": null
+    },
+    {
+      "id": "quick_cardio",
+      "name": "Quick Cardio Blast",
+      "category": "hiit",
+      "durationMinutes": 10,
+      "difficulty": "beginner",
+      "equipmentRequired": [],
+      "estimatedCalories": 80,
+      "exercises": ["jumping_jacks", "high_knees", "bodyweight_squats"],
+      "thumbnailUrl": null
+    },
+    {
+      "id": "rest_day_stretch",
+      "name": "Active Recovery",
+      "category": "yoga",
+      "durationMinutes": 15,
+      "difficulty": "beginner",
+      "equipmentRequired": [],
+      "estimatedCalories": 40,
+      "exercises": ["cat_cow", "childs_pose", "downward_dog", "glute_bridges"],
+      "thumbnailUrl": null
+    }
+  ]
+}
