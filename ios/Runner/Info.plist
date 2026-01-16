@@ -45,6 +45,8 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Dren uses the camera to scan food barcodes for quick nutrition logging.</string>
 	<key>NSHealthShareUsageDescription</key>
 	<string>Dren reads your health data to personalize your longevity protocol and track your daily progress toward your goals.</string>
 	<key>NSHealthUpdateUsageDescription</key>
@@ -52,6 +54,10 @@
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>processing</string>
+	</array>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.drenhealth.dren.healthsync</string>
 	</array>
 </dict>
 </plist>
