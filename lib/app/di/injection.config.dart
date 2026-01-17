@@ -260,16 +260,17 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i489.GetMealsForDate>(),
           gh<_i788.GetRecipes>(),
         ));
-    gh.factory<_i792.OnboardingBloc>(() => _i792.OnboardingBloc(
-          gh<_i430.OnboardingRepository>(),
-          gh<_i531.SaveUserProfile>(),
-          gh<_i9.CheckOnboardingComplete>(),
-        ));
     gh.factory<_i63.TodayBloc>(() => _i63.TodayBloc(
           gh<_i345.GetDailyProgress>(),
           gh<_i276.GetTodayProtocol>(),
           gh<_i160.TodayRepository>(),
           gh<_i357.HealthSyncService>(),
+        ));
+    gh.factory<_i792.OnboardingBloc>(() => _i792.OnboardingBloc(
+          gh<_i430.OnboardingRepository>(),
+          gh<_i531.SaveUserProfile>(),
+          gh<_i9.CheckOnboardingComplete>(),
+          gh<_i894.HealthService>(),
         ));
     gh.lazySingleton<_i1011.SleepRepository>(() => _i547.SleepRepositoryImpl(
           gh<_i266.SleepLocalDataSource>(),

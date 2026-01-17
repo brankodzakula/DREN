@@ -213,8 +213,7 @@ class _OnboardingContent extends StatelessWidget {
                   HealthPermissionsStep(
                     permissionsGranted: state.data.healthPermissionsGranted,
                     onRequestPermissions: () {
-                      // TODO: Implement actual health permissions request
-                      bloc.add(const OnboardingEvent.updateHealthPermissions(granted: true));
+                      bloc.add(const OnboardingEvent.requestHealthPermissions());
                     },
                     onSkip: () => bloc.add(const OnboardingEvent.skipStep()),
                   ),

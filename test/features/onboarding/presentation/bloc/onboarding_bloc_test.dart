@@ -1,4 +1,5 @@
 import 'package:bloc_test/bloc_test.dart';
+import 'package:dren/core/services/health_service.dart';
 import 'package:dren/features/onboarding/domain/entities/onboarding_data.dart';
 import 'package:dren/features/onboarding/domain/repositories/onboarding_repository.dart';
 import 'package:dren/features/onboarding/domain/usecases/check_onboarding_complete.dart';
@@ -17,6 +18,8 @@ class MockSaveUserProfile extends Mock implements SaveUserProfile {}
 class MockCheckOnboardingComplete extends Mock
     implements CheckOnboardingComplete {}
 
+class MockHealthService extends Mock implements HealthService {}
+
 class FakeOnboardingData extends Fake implements OnboardingData {}
 
 void main() {
@@ -28,16 +31,19 @@ void main() {
   late MockOnboardingRepository mockRepository;
   late MockSaveUserProfile mockSaveUserProfile;
   late MockCheckOnboardingComplete mockCheckOnboardingComplete;
+  late MockHealthService mockHealthService;
 
   setUp(() {
     mockRepository = MockOnboardingRepository();
     mockSaveUserProfile = MockSaveUserProfile();
     mockCheckOnboardingComplete = MockCheckOnboardingComplete();
+    mockHealthService = MockHealthService();
 
     bloc = OnboardingBloc(
       mockRepository,
       mockSaveUserProfile,
       mockCheckOnboardingComplete,
+      mockHealthService,
     );
   });
 

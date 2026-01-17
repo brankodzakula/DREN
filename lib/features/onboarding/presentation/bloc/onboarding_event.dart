@@ -78,6 +78,10 @@ class OnboardingEvent with _$OnboardingEvent {
     required bool granted,
   }) = OnboardingUpdateHealthPermissions;
 
+  /// Request health platform permissions (HealthKit / Health Connect)
+  const factory OnboardingEvent.requestHealthPermissions() =
+      OnboardingRequestHealthPermissions;
+
   /// Accept disclaimer
   const factory OnboardingEvent.acceptDisclaimer({
     required bool accepted,

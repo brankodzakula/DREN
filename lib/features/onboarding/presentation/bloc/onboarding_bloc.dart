@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 
+import '../../../../core/services/health_service.dart';
 import '../../domain/entities/onboarding_data.dart';
 import '../../domain/repositories/onboarding_repository.dart';
 import '../../domain/usecases/check_onboarding_complete.dart';
@@ -14,11 +15,13 @@ class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
   final OnboardingRepository _repository;
   final SaveUserProfile _saveUserProfile;
   final CheckOnboardingComplete _checkOnboardingComplete;
+  final HealthService _healthService;
 
   OnboardingBloc(
     this._repository,
     this._saveUserProfile,
     this._checkOnboardingComplete,
+    this._healthService,
   ) : super(const OnboardingState.initial()) {
     on<OnboardingStarted>(_onStarted);
     on<OnboardingNextStep>(_onNextStep);
@@ -36,6 +39,7 @@ class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
     on<OnboardingUpdateWakeTime>(_onUpdateWakeTime);
     on<OnboardingUpdateAmbition>(_onUpdateAmbition);
     on<OnboardingUpdateHealthPermissions>(_onUpdateHealthPermissions);
+    on<OnboardingRequestHealthPermissions>(_onRequestHealthPermissions);
     on<OnboardingAcceptDisclaimer>(_onAcceptDisclaimer);
     on<OnboardingSubmit>(_onSubmit);
     on<OnboardingReset>(_onReset);
@@ -261,6 +265,27 @@ class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
   ) async {
     _updateData(
         emit, (data) => data.copyWith(healthPermissionsGranted: event.granted));
+  }
+
+  /// Handle health permissions request (actually request from platform)
+  Future<void> _onRequestHealthPermissions(
+    OnboardingRequestHealthPermissions event,
+    Emitter<OnboardingState> emit,
+  ) async {
+    final currentState = state;
+    if (currentState is! OnboardingCollecting) return;
+
+    try {
+      final result = await _healthService.requestPermissions();
+      final granted = result.isSuccess && result.data == true;
+
+      _updateData(
+          emit, (data) => data.copyWith(healthPermissionsGranted: granted));
+    } catch (e) {
+      // If permission request fails, mark as not granted
+      _updateData(
+          emit, (data) => data.copyWith(healthPermissionsGranted: false));
+    }
   }
 
   /// Handle disclaimer acceptance

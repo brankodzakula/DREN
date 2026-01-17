@@ -34,6 +34,7 @@ mixin _$OnboardingEvent {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -57,6 +58,7 @@ mixin _$OnboardingEvent {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -80,6 +82,7 @@ mixin _$OnboardingEvent {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -107,6 +110,8 @@ mixin _$OnboardingEvent {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -132,6 +137,8 @@ mixin _$OnboardingEvent {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -156,6 +163,8 @@ mixin _$OnboardingEvent {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -242,6 +251,7 @@ class _$OnboardingStartedImpl implements OnboardingStarted {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -268,6 +278,7 @@ class _$OnboardingStartedImpl implements OnboardingStarted {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -294,6 +305,7 @@ class _$OnboardingStartedImpl implements OnboardingStarted {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -327,6 +339,8 @@ class _$OnboardingStartedImpl implements OnboardingStarted {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -355,6 +369,8 @@ class _$OnboardingStartedImpl implements OnboardingStarted {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -382,6 +398,8 @@ class _$OnboardingStartedImpl implements OnboardingStarted {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -455,6 +473,7 @@ class _$OnboardingNextStepImpl implements OnboardingNextStep {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -481,6 +500,7 @@ class _$OnboardingNextStepImpl implements OnboardingNextStep {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -507,6 +527,7 @@ class _$OnboardingNextStepImpl implements OnboardingNextStep {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -540,6 +561,8 @@ class _$OnboardingNextStepImpl implements OnboardingNextStep {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -568,6 +591,8 @@ class _$OnboardingNextStepImpl implements OnboardingNextStep {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -595,6 +620,8 @@ class _$OnboardingNextStepImpl implements OnboardingNextStep {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -671,6 +698,7 @@ class _$OnboardingPreviousStepImpl implements OnboardingPreviousStep {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -697,6 +725,7 @@ class _$OnboardingPreviousStepImpl implements OnboardingPreviousStep {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -723,6 +752,7 @@ class _$OnboardingPreviousStepImpl implements OnboardingPreviousStep {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -756,6 +786,8 @@ class _$OnboardingPreviousStepImpl implements OnboardingPreviousStep {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -784,6 +816,8 @@ class _$OnboardingPreviousStepImpl implements OnboardingPreviousStep {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -811,6 +845,8 @@ class _$OnboardingPreviousStepImpl implements OnboardingPreviousStep {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -884,6 +920,7 @@ class _$OnboardingSkipStepImpl implements OnboardingSkipStep {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -910,6 +947,7 @@ class _$OnboardingSkipStepImpl implements OnboardingSkipStep {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -936,6 +974,7 @@ class _$OnboardingSkipStepImpl implements OnboardingSkipStep {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -969,6 +1008,8 @@ class _$OnboardingSkipStepImpl implements OnboardingSkipStep {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -997,6 +1038,8 @@ class _$OnboardingSkipStepImpl implements OnboardingSkipStep {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -1024,6 +1067,8 @@ class _$OnboardingSkipStepImpl implements OnboardingSkipStep {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -1126,6 +1171,7 @@ class _$OnboardingGoToStepImpl implements OnboardingGoToStep {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -1152,6 +1198,7 @@ class _$OnboardingGoToStepImpl implements OnboardingGoToStep {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -1178,6 +1225,7 @@ class _$OnboardingGoToStepImpl implements OnboardingGoToStep {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -1211,6 +1259,8 @@ class _$OnboardingGoToStepImpl implements OnboardingGoToStep {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -1239,6 +1289,8 @@ class _$OnboardingGoToStepImpl implements OnboardingGoToStep {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -1266,6 +1318,8 @@ class _$OnboardingGoToStepImpl implements OnboardingGoToStep {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -1379,6 +1433,7 @@ class _$OnboardingUpdateBirthDateImpl implements OnboardingUpdateBirthDate {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -1405,6 +1460,7 @@ class _$OnboardingUpdateBirthDateImpl implements OnboardingUpdateBirthDate {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -1431,6 +1487,7 @@ class _$OnboardingUpdateBirthDateImpl implements OnboardingUpdateBirthDate {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -1464,6 +1521,8 @@ class _$OnboardingUpdateBirthDateImpl implements OnboardingUpdateBirthDate {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -1492,6 +1551,8 @@ class _$OnboardingUpdateBirthDateImpl implements OnboardingUpdateBirthDate {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -1519,6 +1580,8 @@ class _$OnboardingUpdateBirthDateImpl implements OnboardingUpdateBirthDate {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -1629,6 +1692,7 @@ class _$OnboardingUpdateSexImpl implements OnboardingUpdateSex {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -1655,6 +1719,7 @@ class _$OnboardingUpdateSexImpl implements OnboardingUpdateSex {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -1681,6 +1746,7 @@ class _$OnboardingUpdateSexImpl implements OnboardingUpdateSex {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -1714,6 +1780,8 @@ class _$OnboardingUpdateSexImpl implements OnboardingUpdateSex {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -1742,6 +1810,8 @@ class _$OnboardingUpdateSexImpl implements OnboardingUpdateSex {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -1769,6 +1839,8 @@ class _$OnboardingUpdateSexImpl implements OnboardingUpdateSex {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -1882,6 +1954,7 @@ class _$OnboardingUpdateHeightImpl implements OnboardingUpdateHeight {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -1908,6 +1981,7 @@ class _$OnboardingUpdateHeightImpl implements OnboardingUpdateHeight {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -1934,6 +2008,7 @@ class _$OnboardingUpdateHeightImpl implements OnboardingUpdateHeight {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -1967,6 +2042,8 @@ class _$OnboardingUpdateHeightImpl implements OnboardingUpdateHeight {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -1995,6 +2072,8 @@ class _$OnboardingUpdateHeightImpl implements OnboardingUpdateHeight {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -2022,6 +2101,8 @@ class _$OnboardingUpdateHeightImpl implements OnboardingUpdateHeight {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -2135,6 +2216,7 @@ class _$OnboardingUpdateWeightImpl implements OnboardingUpdateWeight {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -2161,6 +2243,7 @@ class _$OnboardingUpdateWeightImpl implements OnboardingUpdateWeight {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -2187,6 +2270,7 @@ class _$OnboardingUpdateWeightImpl implements OnboardingUpdateWeight {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -2220,6 +2304,8 @@ class _$OnboardingUpdateWeightImpl implements OnboardingUpdateWeight {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -2248,6 +2334,8 @@ class _$OnboardingUpdateWeightImpl implements OnboardingUpdateWeight {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -2275,6 +2363,8 @@ class _$OnboardingUpdateWeightImpl implements OnboardingUpdateWeight {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -2391,6 +2481,7 @@ class _$OnboardingUpdateTargetWeightImpl
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -2417,6 +2508,7 @@ class _$OnboardingUpdateTargetWeightImpl
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -2443,6 +2535,7 @@ class _$OnboardingUpdateTargetWeightImpl
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -2476,6 +2569,8 @@ class _$OnboardingUpdateTargetWeightImpl
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -2504,6 +2599,8 @@ class _$OnboardingUpdateTargetWeightImpl
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -2531,6 +2628,8 @@ class _$OnboardingUpdateTargetWeightImpl
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -2648,6 +2747,7 @@ class _$OnboardingUpdateActivityLevelImpl
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -2674,6 +2774,7 @@ class _$OnboardingUpdateActivityLevelImpl
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -2700,6 +2801,7 @@ class _$OnboardingUpdateActivityLevelImpl
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -2733,6 +2835,8 @@ class _$OnboardingUpdateActivityLevelImpl
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -2761,6 +2865,8 @@ class _$OnboardingUpdateActivityLevelImpl
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -2788,6 +2894,8 @@ class _$OnboardingUpdateActivityLevelImpl
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -2908,6 +3016,7 @@ class _$OnboardingUpdateGoalsImpl implements OnboardingUpdateGoals {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -2934,6 +3043,7 @@ class _$OnboardingUpdateGoalsImpl implements OnboardingUpdateGoals {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -2960,6 +3070,7 @@ class _$OnboardingUpdateGoalsImpl implements OnboardingUpdateGoals {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -2993,6 +3104,8 @@ class _$OnboardingUpdateGoalsImpl implements OnboardingUpdateGoals {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -3021,6 +3134,8 @@ class _$OnboardingUpdateGoalsImpl implements OnboardingUpdateGoals {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -3048,6 +3163,8 @@ class _$OnboardingUpdateGoalsImpl implements OnboardingUpdateGoals {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -3159,6 +3276,7 @@ class _$OnboardingToggleGoalImpl implements OnboardingToggleGoal {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -3185,6 +3303,7 @@ class _$OnboardingToggleGoalImpl implements OnboardingToggleGoal {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -3211,6 +3330,7 @@ class _$OnboardingToggleGoalImpl implements OnboardingToggleGoal {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -3244,6 +3364,8 @@ class _$OnboardingToggleGoalImpl implements OnboardingToggleGoal {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -3272,6 +3394,8 @@ class _$OnboardingToggleGoalImpl implements OnboardingToggleGoal {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -3299,6 +3423,8 @@ class _$OnboardingToggleGoalImpl implements OnboardingToggleGoal {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -3412,6 +3538,7 @@ class _$OnboardingUpdateWakeTimeImpl implements OnboardingUpdateWakeTime {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -3438,6 +3565,7 @@ class _$OnboardingUpdateWakeTimeImpl implements OnboardingUpdateWakeTime {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -3464,6 +3592,7 @@ class _$OnboardingUpdateWakeTimeImpl implements OnboardingUpdateWakeTime {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -3497,6 +3626,8 @@ class _$OnboardingUpdateWakeTimeImpl implements OnboardingUpdateWakeTime {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -3525,6 +3656,8 @@ class _$OnboardingUpdateWakeTimeImpl implements OnboardingUpdateWakeTime {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -3552,6 +3685,8 @@ class _$OnboardingUpdateWakeTimeImpl implements OnboardingUpdateWakeTime {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -3665,6 +3800,7 @@ class _$OnboardingUpdateAmbitionImpl implements OnboardingUpdateAmbition {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -3691,6 +3827,7 @@ class _$OnboardingUpdateAmbitionImpl implements OnboardingUpdateAmbition {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -3717,6 +3854,7 @@ class _$OnboardingUpdateAmbitionImpl implements OnboardingUpdateAmbition {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -3750,6 +3888,8 @@ class _$OnboardingUpdateAmbitionImpl implements OnboardingUpdateAmbition {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -3778,6 +3918,8 @@ class _$OnboardingUpdateAmbitionImpl implements OnboardingUpdateAmbition {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -3805,6 +3947,8 @@ class _$OnboardingUpdateAmbitionImpl implements OnboardingUpdateAmbition {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -3920,6 +4064,7 @@ class _$OnboardingUpdateHealthPermissionsImpl
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -3946,6 +4091,7 @@ class _$OnboardingUpdateHealthPermissionsImpl
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -3972,6 +4118,7 @@ class _$OnboardingUpdateHealthPermissionsImpl
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -4005,6 +4152,8 @@ class _$OnboardingUpdateHealthPermissionsImpl
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -4033,6 +4182,8 @@ class _$OnboardingUpdateHealthPermissionsImpl
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -4060,6 +4211,8 @@ class _$OnboardingUpdateHealthPermissionsImpl
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -4084,6 +4237,234 @@ abstract class OnboardingUpdateHealthPermissions implements OnboardingEvent {
   _$$OnboardingUpdateHealthPermissionsImplCopyWith<
           _$OnboardingUpdateHealthPermissionsImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$OnboardingRequestHealthPermissionsImplCopyWith<$Res> {
+  factory _$$OnboardingRequestHealthPermissionsImplCopyWith(
+          _$OnboardingRequestHealthPermissionsImpl value,
+          $Res Function(_$OnboardingRequestHealthPermissionsImpl) then) =
+      __$$OnboardingRequestHealthPermissionsImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$OnboardingRequestHealthPermissionsImplCopyWithImpl<$Res>
+    extends _$OnboardingEventCopyWithImpl<$Res,
+        _$OnboardingRequestHealthPermissionsImpl>
+    implements _$$OnboardingRequestHealthPermissionsImplCopyWith<$Res> {
+  __$$OnboardingRequestHealthPermissionsImplCopyWithImpl(
+      _$OnboardingRequestHealthPermissionsImpl _value,
+      $Res Function(_$OnboardingRequestHealthPermissionsImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of OnboardingEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$OnboardingRequestHealthPermissionsImpl
+    implements OnboardingRequestHealthPermissions {
+  const _$OnboardingRequestHealthPermissionsImpl();
+
+  @override
+  String toString() {
+    return 'OnboardingEvent.requestHealthPermissions()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$OnboardingRequestHealthPermissionsImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() nextStep,
+    required TResult Function() previousStep,
+    required TResult Function() skipStep,
+    required TResult Function(int stepIndex) goToStep,
+    required TResult Function(DateTime birthDate) updateBirthDate,
+    required TResult Function(String sex) updateSex,
+    required TResult Function(double heightCm) updateHeight,
+    required TResult Function(double weightKg) updateWeight,
+    required TResult Function(double? targetWeightKg) updateTargetWeight,
+    required TResult Function(String activityLevel) updateActivityLevel,
+    required TResult Function(List<String> goals) updateGoals,
+    required TResult Function(String goal) toggleGoal,
+    required TResult Function(TimeOfDay wakeTime) updateWakeTime,
+    required TResult Function(String ambition) updateAmbition,
+    required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
+    required TResult Function(bool accepted) acceptDisclaimer,
+    required TResult Function() submit,
+    required TResult Function() reset,
+  }) {
+    return requestHealthPermissions();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? nextStep,
+    TResult? Function()? previousStep,
+    TResult? Function()? skipStep,
+    TResult? Function(int stepIndex)? goToStep,
+    TResult? Function(DateTime birthDate)? updateBirthDate,
+    TResult? Function(String sex)? updateSex,
+    TResult? Function(double heightCm)? updateHeight,
+    TResult? Function(double weightKg)? updateWeight,
+    TResult? Function(double? targetWeightKg)? updateTargetWeight,
+    TResult? Function(String activityLevel)? updateActivityLevel,
+    TResult? Function(List<String> goals)? updateGoals,
+    TResult? Function(String goal)? toggleGoal,
+    TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
+    TResult? Function(String ambition)? updateAmbition,
+    TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
+    TResult? Function(bool accepted)? acceptDisclaimer,
+    TResult? Function()? submit,
+    TResult? Function()? reset,
+  }) {
+    return requestHealthPermissions?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? nextStep,
+    TResult Function()? previousStep,
+    TResult Function()? skipStep,
+    TResult Function(int stepIndex)? goToStep,
+    TResult Function(DateTime birthDate)? updateBirthDate,
+    TResult Function(String sex)? updateSex,
+    TResult Function(double heightCm)? updateHeight,
+    TResult Function(double weightKg)? updateWeight,
+    TResult Function(double? targetWeightKg)? updateTargetWeight,
+    TResult Function(String activityLevel)? updateActivityLevel,
+    TResult Function(List<String> goals)? updateGoals,
+    TResult Function(String goal)? toggleGoal,
+    TResult Function(TimeOfDay wakeTime)? updateWakeTime,
+    TResult Function(String ambition)? updateAmbition,
+    TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
+    TResult Function(bool accepted)? acceptDisclaimer,
+    TResult Function()? submit,
+    TResult Function()? reset,
+    required TResult orElse(),
+  }) {
+    if (requestHealthPermissions != null) {
+      return requestHealthPermissions();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(OnboardingStarted value) started,
+    required TResult Function(OnboardingNextStep value) nextStep,
+    required TResult Function(OnboardingPreviousStep value) previousStep,
+    required TResult Function(OnboardingSkipStep value) skipStep,
+    required TResult Function(OnboardingGoToStep value) goToStep,
+    required TResult Function(OnboardingUpdateBirthDate value) updateBirthDate,
+    required TResult Function(OnboardingUpdateSex value) updateSex,
+    required TResult Function(OnboardingUpdateHeight value) updateHeight,
+    required TResult Function(OnboardingUpdateWeight value) updateWeight,
+    required TResult Function(OnboardingUpdateTargetWeight value)
+        updateTargetWeight,
+    required TResult Function(OnboardingUpdateActivityLevel value)
+        updateActivityLevel,
+    required TResult Function(OnboardingUpdateGoals value) updateGoals,
+    required TResult Function(OnboardingToggleGoal value) toggleGoal,
+    required TResult Function(OnboardingUpdateWakeTime value) updateWakeTime,
+    required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
+    required TResult Function(OnboardingUpdateHealthPermissions value)
+        updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
+    required TResult Function(OnboardingAcceptDisclaimer value)
+        acceptDisclaimer,
+    required TResult Function(OnboardingSubmit value) submit,
+    required TResult Function(OnboardingReset value) reset,
+  }) {
+    return requestHealthPermissions(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(OnboardingStarted value)? started,
+    TResult? Function(OnboardingNextStep value)? nextStep,
+    TResult? Function(OnboardingPreviousStep value)? previousStep,
+    TResult? Function(OnboardingSkipStep value)? skipStep,
+    TResult? Function(OnboardingGoToStep value)? goToStep,
+    TResult? Function(OnboardingUpdateBirthDate value)? updateBirthDate,
+    TResult? Function(OnboardingUpdateSex value)? updateSex,
+    TResult? Function(OnboardingUpdateHeight value)? updateHeight,
+    TResult? Function(OnboardingUpdateWeight value)? updateWeight,
+    TResult? Function(OnboardingUpdateTargetWeight value)? updateTargetWeight,
+    TResult? Function(OnboardingUpdateActivityLevel value)? updateActivityLevel,
+    TResult? Function(OnboardingUpdateGoals value)? updateGoals,
+    TResult? Function(OnboardingToggleGoal value)? toggleGoal,
+    TResult? Function(OnboardingUpdateWakeTime value)? updateWakeTime,
+    TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
+    TResult? Function(OnboardingUpdateHealthPermissions value)?
+        updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
+    TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
+    TResult? Function(OnboardingSubmit value)? submit,
+    TResult? Function(OnboardingReset value)? reset,
+  }) {
+    return requestHealthPermissions?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(OnboardingStarted value)? started,
+    TResult Function(OnboardingNextStep value)? nextStep,
+    TResult Function(OnboardingPreviousStep value)? previousStep,
+    TResult Function(OnboardingSkipStep value)? skipStep,
+    TResult Function(OnboardingGoToStep value)? goToStep,
+    TResult Function(OnboardingUpdateBirthDate value)? updateBirthDate,
+    TResult Function(OnboardingUpdateSex value)? updateSex,
+    TResult Function(OnboardingUpdateHeight value)? updateHeight,
+    TResult Function(OnboardingUpdateWeight value)? updateWeight,
+    TResult Function(OnboardingUpdateTargetWeight value)? updateTargetWeight,
+    TResult Function(OnboardingUpdateActivityLevel value)? updateActivityLevel,
+    TResult Function(OnboardingUpdateGoals value)? updateGoals,
+    TResult Function(OnboardingToggleGoal value)? toggleGoal,
+    TResult Function(OnboardingUpdateWakeTime value)? updateWakeTime,
+    TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
+    TResult Function(OnboardingUpdateHealthPermissions value)?
+        updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
+    TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
+    TResult Function(OnboardingSubmit value)? submit,
+    TResult Function(OnboardingReset value)? reset,
+    required TResult orElse(),
+  }) {
+    if (requestHealthPermissions != null) {
+      return requestHealthPermissions(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class OnboardingRequestHealthPermissions implements OnboardingEvent {
+  const factory OnboardingRequestHealthPermissions() =
+      _$OnboardingRequestHealthPermissionsImpl;
 }
 
 /// @nodoc
@@ -4175,6 +4556,7 @@ class _$OnboardingAcceptDisclaimerImpl implements OnboardingAcceptDisclaimer {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -4201,6 +4583,7 @@ class _$OnboardingAcceptDisclaimerImpl implements OnboardingAcceptDisclaimer {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -4227,6 +4610,7 @@ class _$OnboardingAcceptDisclaimerImpl implements OnboardingAcceptDisclaimer {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -4260,6 +4644,8 @@ class _$OnboardingAcceptDisclaimerImpl implements OnboardingAcceptDisclaimer {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -4288,6 +4674,8 @@ class _$OnboardingAcceptDisclaimerImpl implements OnboardingAcceptDisclaimer {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -4315,6 +4703,8 @@ class _$OnboardingAcceptDisclaimerImpl implements OnboardingAcceptDisclaimer {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -4397,6 +4787,7 @@ class _$OnboardingSubmitImpl implements OnboardingSubmit {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -4423,6 +4814,7 @@ class _$OnboardingSubmitImpl implements OnboardingSubmit {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -4449,6 +4841,7 @@ class _$OnboardingSubmitImpl implements OnboardingSubmit {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -4482,6 +4875,8 @@ class _$OnboardingSubmitImpl implements OnboardingSubmit {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -4510,6 +4905,8 @@ class _$OnboardingSubmitImpl implements OnboardingSubmit {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -4537,6 +4934,8 @@ class _$OnboardingSubmitImpl implements OnboardingSubmit {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
@@ -4610,6 +5009,7 @@ class _$OnboardingResetImpl implements OnboardingReset {
     required TResult Function(TimeOfDay wakeTime) updateWakeTime,
     required TResult Function(String ambition) updateAmbition,
     required TResult Function(bool granted) updateHealthPermissions,
+    required TResult Function() requestHealthPermissions,
     required TResult Function(bool accepted) acceptDisclaimer,
     required TResult Function() submit,
     required TResult Function() reset,
@@ -4636,6 +5036,7 @@ class _$OnboardingResetImpl implements OnboardingReset {
     TResult? Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult? Function(String ambition)? updateAmbition,
     TResult? Function(bool granted)? updateHealthPermissions,
+    TResult? Function()? requestHealthPermissions,
     TResult? Function(bool accepted)? acceptDisclaimer,
     TResult? Function()? submit,
     TResult? Function()? reset,
@@ -4662,6 +5063,7 @@ class _$OnboardingResetImpl implements OnboardingReset {
     TResult Function(TimeOfDay wakeTime)? updateWakeTime,
     TResult Function(String ambition)? updateAmbition,
     TResult Function(bool granted)? updateHealthPermissions,
+    TResult Function()? requestHealthPermissions,
     TResult Function(bool accepted)? acceptDisclaimer,
     TResult Function()? submit,
     TResult Function()? reset,
@@ -4695,6 +5097,8 @@ class _$OnboardingResetImpl implements OnboardingReset {
     required TResult Function(OnboardingUpdateAmbition value) updateAmbition,
     required TResult Function(OnboardingUpdateHealthPermissions value)
         updateHealthPermissions,
+    required TResult Function(OnboardingRequestHealthPermissions value)
+        requestHealthPermissions,
     required TResult Function(OnboardingAcceptDisclaimer value)
         acceptDisclaimer,
     required TResult Function(OnboardingSubmit value) submit,
@@ -4723,6 +5127,8 @@ class _$OnboardingResetImpl implements OnboardingReset {
     TResult? Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult? Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult? Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult? Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult? Function(OnboardingSubmit value)? submit,
     TResult? Function(OnboardingReset value)? reset,
@@ -4750,6 +5156,8 @@ class _$OnboardingResetImpl implements OnboardingReset {
     TResult Function(OnboardingUpdateAmbition value)? updateAmbition,
     TResult Function(OnboardingUpdateHealthPermissions value)?
         updateHealthPermissions,
+    TResult Function(OnboardingRequestHealthPermissions value)?
+        requestHealthPermissions,
     TResult Function(OnboardingAcceptDisclaimer value)? acceptDisclaimer,
     TResult Function(OnboardingSubmit value)? submit,
     TResult Function(OnboardingReset value)? reset,
