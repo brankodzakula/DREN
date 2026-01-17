@@ -22,6 +22,11 @@ import '../../core/services/database/daos/sleep_session_dao.dart' as _i487;
 import '../../core/services/database/daos/user_profile_dao.dart' as _i141;
 import '../../core/services/database/daos/workout_dao.dart' as _i595;
 import '../../core/services/database/daos/workout_session_dao.dart' as _i901;
+import '../../core/services/firebase/analytics_service.dart' as _i734;
+import '../../core/services/firebase/auth_service.dart' as _i107;
+import '../../core/services/firebase/firestore_service.dart' as _i227;
+import '../../core/services/firebase/messaging_service.dart' as _i508;
+import '../../core/services/firebase/storage_service.dart' as _i888;
 import '../../core/services/health_service.dart' as _i894;
 import '../../core/services/health_sync_service.dart' as _i357;
 import '../../core/services/network/network_module.dart' as _i504;
@@ -125,10 +130,17 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i814.SecureStorageService());
     gh.singleton<_i232.FoodCache>(() => _i232.FoodCache());
     gh.lazySingleton<_i894.HealthService>(() => _i894.HealthService());
+    gh.lazySingleton<_i734.AnalyticsService>(() => _i734.AnalyticsService());
+    gh.lazySingleton<_i508.MessagingService>(() => _i508.MessagingService());
+    gh.lazySingleton<_i107.AuthService>(() => _i107.AuthService());
     gh.lazySingleton<_i944.MeditationDataSource>(
         () => _i944.MeditationDataSource());
     gh.lazySingleton<_i1034.ExerciseLocalDataSource>(
         () => _i1034.ExerciseLocalDataSourceImpl());
+    gh.lazySingleton<_i227.FirestoreService>(
+        () => _i227.FirestoreService(gh<_i107.AuthService>()));
+    gh.lazySingleton<_i888.StorageService>(
+        () => _i888.StorageService(gh<_i107.AuthService>()));
     gh.lazySingleton<_i357.HealthSyncService>(
         () => _i357.HealthSyncService(gh<_i894.HealthService>()));
     gh.factory<_i505.OpenFoodFactsDataSource>(

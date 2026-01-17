@@ -1,4 +1,4 @@
-package com.dren.dren
+package com.drenhealth.dren
 
 import io.flutter.embedding.android.FlutterActivity
 
