@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
 import '../../../../core/services/database/app_database.dart';
+import '../../../../core/services/firebase/auth_service.dart';
+import '../../../../core/services/firebase/firestore_service.dart';
 import '../../../../core/services/secure_storage_service.dart';
 import '../../domain/entities/user_settings.dart';
 import '../../domain/repositories/settings_repository.dart';
@@ -11,10 +13,17 @@ import '../../domain/repositories/settings_repository.dart';
 class SettingsRepositoryImpl implements SettingsRepository {
   final AppDatabase _database;
   final SecureStorageService _secureStorage;
+  final FirestoreService _firestoreService;
+  final AuthService _authService;
 
   static const _notificationPrefsKey = 'notification_preferences';
 
-  SettingsRepositoryImpl(this._database, this._secureStorage);
+  SettingsRepositoryImpl(
+    this._database,
+    this._secureStorage,
+    this._firestoreService,
+    this._authService,
+  );
 
   @override
   Future<UserSettings?> getUserSettings() async {
@@ -75,6 +84,20 @@ class SettingsRepositoryImpl implements SettingsRepository {
     );
 
     await _database.userProfileDao.upsertUserProfile(companion);
+
+    // Sync to Firestore if authenticated
+    if (_authService.isSignedIn) {
+      final updates = <String, dynamic>{};
+      if (weightKg != null) updates['weightKg'] = weightKg;
+      if (targetWeightKg != null) updates['targetWeightKg'] = targetWeightKg;
+      if (heightCm != null) updates['heightCm'] = heightCm;
+      if (activityLevel != null) updates['activityLevel'] = activityLevel;
+      if (fitnessLevel != null) updates['fitnessLevel'] = fitnessLevel;
+      if (wakeTime != null) updates['wakeTime'] = _formatTimeOfDay(wakeTime);
+      if (updates.isNotEmpty) {
+        await _firestoreService.saveUserProfile(updates);
+      }
+    }
   }
 
   @override
@@ -89,6 +112,13 @@ class SettingsRepositoryImpl implements SettingsRepository {
     );
 
     await _database.userProfileDao.upsertUserProfile(companion);
+
+    // Sync to Firestore if authenticated
+    if (_authService.isSignedIn) {
+      await _firestoreService.saveUserProfile({
+        'longevityAmbition': ambition,
+      });
+    }
   }
 
   @override

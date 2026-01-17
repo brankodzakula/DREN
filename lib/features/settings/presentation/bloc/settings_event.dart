@@ -51,4 +51,10 @@ class SettingsEvent with _$SettingsEvent {
 
   /// Clear success message
   const factory SettingsEvent.clearMessage() = ClearMessage;
+
+  /// Sign out
+  const factory SettingsEvent.signOut() = SignOut;
+
+  /// Delete account
+  const factory SettingsEvent.deleteAccount() = DeleteAccount;
 }

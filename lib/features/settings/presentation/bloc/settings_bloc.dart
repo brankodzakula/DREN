@@ -7,6 +7,8 @@ import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../../../../core/services/health_service.dart';
+import '../../../../core/services/firebase/auth_service.dart';
+import '../../../../core/services/firebase/analytics_service.dart';
 import '../../domain/entities/user_settings.dart';
 import '../../domain/usecases/get_user_settings.dart';
 import '../../domain/usecases/manage_data.dart';
@@ -24,6 +26,8 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
   final ManageData _manageData;
   final SettingsRepository _settingsRepository;
   final HealthService _healthService;
+  final AuthService _authService;
+  final AnalyticsService _analyticsService;
 
   SettingsBloc(
     this._getUserSettings,
@@ -32,6 +36,8 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
     this._manageData,
     this._settingsRepository,
     this._healthService,
+    this._authService,
+    this._analyticsService,
   ) : super(const SettingsState.initial()) {
     on<LoadSettings>(_onLoadSettings);
     on<RefreshSettings>(_onRefresh);
@@ -46,6 +52,8 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
     on<ExportData>(_onExportData);
     on<ClearAllData>(_onClearAllData);
     on<ClearMessage>(_onClearMessage);
+    on<SignOut>(_onSignOut);
+    on<DeleteAccount>(_onDeleteAccount);
   }
 
   Future<void> _onLoadSettings(
@@ -378,6 +386,60 @@ class SettingsBloc extends Bloc<SettingsEvent, SettingsState> {
         platformName: Platform.isIOS ? 'Apple Health' : 'Health Connect',
         errorMessage: e.toString(),
       );
+    }
+  }
+
+  Future<void> _onSignOut(
+    SignOut event,
+    Emitter<SettingsState> emit,
+  ) async {
+    final currentState = state;
+    if (currentState is SettingsLoaded) {
+      emit(currentState.copyWith(isSaving: true));
+    }
+
+    try {
+      await _authService.signOut();
+      await _analyticsService.clearUserId();
+      emit(const SettingsState.initial());
+    } catch (e) {
+      if (currentState is SettingsLoaded) {
+        emit(currentState.copyWith(
+          isSaving: false,
+          successMessage: 'Failed to sign out: ${e.toString()}',
+        ));
+      }
+    }
+  }
+
+  Future<void> _onDeleteAccount(
+    DeleteAccount event,
+    Emitter<SettingsState> emit,
+  ) async {
+    final currentState = state;
+    if (currentState is! SettingsLoaded) return;
+
+    emit(currentState.copyWith(isSaving: true));
+
+    try {
+      // Clear local data first
+      await _manageData.clearAllData();
+      // Then delete Firebase account
+      final result = await _authService.deleteAccount();
+      if (result.isSuccess) {
+        await _analyticsService.clearUserId();
+        emit(const SettingsState.initial());
+      } else {
+        emit(currentState.copyWith(
+          isSaving: false,
+          successMessage: 'Failed to delete account. Please try again.',
+        ));
+      }
+    } catch (e) {
+      emit(currentState.copyWith(
+        isSaving: false,
+        successMessage: 'Failed to delete account: ${e.toString()}',
+      ));
     }
   }
 }

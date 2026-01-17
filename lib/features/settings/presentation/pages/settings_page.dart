@@ -60,9 +60,9 @@ class _SettingsPageContent extends StatelessWidget {
             context.read<SettingsBloc>().add(const SettingsEvent.clearMessage());
           }
 
-          // Handle data clear - navigate to onboarding
+          // Handle sign out or data clear - navigate to login
           if (state is SettingsInitial) {
-            context.go('/onboarding');
+            context.go('/login');
           }
         },
         builder: (context, state) {
@@ -296,6 +296,25 @@ class _SettingsPageContent extends StatelessWidget {
                   onTap: () {
                     // TODO: Open terms of service
                   },
+                ),
+              ],
+            ),
+
+            // Account Section
+            SettingsSection(
+              title: 'Account',
+              children: [
+                SettingsTile(
+                  icon: Icons.logout,
+                  title: 'Sign Out',
+                  onTap: () => _showSignOutConfirmation(context),
+                ),
+                SettingsTile(
+                  icon: Icons.delete_outline,
+                  title: 'Delete Account',
+                  subtitle: 'Permanently delete your account and all data',
+                  titleColor: DrenColors.error,
+                  onTap: () => _showDeleteAccountConfirmation(context),
                 ),
               ],
             ),
@@ -707,6 +726,94 @@ class _SettingsPageContent extends StatelessWidget {
             },
             child: Text(
               'Delete All',
+              style: DrenTypography.body.copyWith(
+                color: DrenColors.error,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showSignOutConfirmation(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: DrenColors.surfacePrimary,
+        title: Text(
+          'Sign Out?',
+          style: DrenTypography.title2.copyWith(
+            color: DrenColors.textPrimary,
+          ),
+        ),
+        content: Text(
+          'Are you sure you want to sign out of your account?',
+          style: DrenTypography.body.copyWith(
+            color: DrenColors.textSecondary,
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: Text(
+              'Cancel',
+              style: DrenTypography.body.copyWith(
+                color: DrenColors.textSecondary,
+              ),
+            ),
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.pop(ctx);
+              context.read<SettingsBloc>().add(const SettingsEvent.signOut());
+            },
+            child: Text(
+              'Sign Out',
+              style: DrenTypography.body.copyWith(
+                color: DrenColors.primary,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showDeleteAccountConfirmation(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: DrenColors.surfacePrimary,
+        title: Text(
+          'Delete Account?',
+          style: DrenTypography.title2.copyWith(
+            color: DrenColors.textPrimary,
+          ),
+        ),
+        content: Text(
+          'This will permanently delete your account and all associated data. This action cannot be undone and you will need to create a new account to use the app again.',
+          style: DrenTypography.body.copyWith(
+            color: DrenColors.textSecondary,
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: Text(
+              'Cancel',
+              style: DrenTypography.body.copyWith(
+                color: DrenColors.textSecondary,
+              ),
+            ),
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.pop(ctx);
+              context.read<SettingsBloc>().add(const SettingsEvent.deleteAccount());
+            },
+            child: Text(
+              'Delete Account',
               style: DrenTypography.body.copyWith(
                 color: DrenColors.error,
               ),

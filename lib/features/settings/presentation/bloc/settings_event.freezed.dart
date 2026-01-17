@@ -32,6 +32,8 @@ mixin _$SettingsEvent {
     required TResult Function() exportData,
     required TResult Function() clearAllData,
     required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -49,6 +51,8 @@ mixin _$SettingsEvent {
     TResult? Function()? exportData,
     TResult? Function()? clearAllData,
     TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -66,6 +70,8 @@ mixin _$SettingsEvent {
     TResult Function()? exportData,
     TResult Function()? clearAllData,
     TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -85,6 +91,8 @@ mixin _$SettingsEvent {
     required TResult Function(ExportData value) exportData,
     required TResult Function(ClearAllData value) clearAllData,
     required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -102,6 +110,8 @@ mixin _$SettingsEvent {
     TResult? Function(ExportData value)? exportData,
     TResult? Function(ClearAllData value)? clearAllData,
     TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -119,6 +129,8 @@ mixin _$SettingsEvent {
     TResult Function(ExportData value)? exportData,
     TResult Function(ClearAllData value)? clearAllData,
     TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -200,6 +212,8 @@ class _$LoadSettingsImpl implements LoadSettings {
     required TResult Function() exportData,
     required TResult Function() clearAllData,
     required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
   }) {
     return loadSettings();
   }
@@ -220,6 +234,8 @@ class _$LoadSettingsImpl implements LoadSettings {
     TResult? Function()? exportData,
     TResult? Function()? clearAllData,
     TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
   }) {
     return loadSettings?.call();
   }
@@ -240,6 +256,8 @@ class _$LoadSettingsImpl implements LoadSettings {
     TResult Function()? exportData,
     TResult Function()? clearAllData,
     TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
     required TResult orElse(),
   }) {
     if (loadSettings != null) {
@@ -265,6 +283,8 @@ class _$LoadSettingsImpl implements LoadSettings {
     required TResult Function(ExportData value) exportData,
     required TResult Function(ClearAllData value) clearAllData,
     required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
   }) {
     return loadSettings(this);
   }
@@ -285,6 +305,8 @@ class _$LoadSettingsImpl implements LoadSettings {
     TResult? Function(ExportData value)? exportData,
     TResult? Function(ClearAllData value)? clearAllData,
     TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
   }) {
     return loadSettings?.call(this);
   }
@@ -305,6 +327,8 @@ class _$LoadSettingsImpl implements LoadSettings {
     TResult Function(ExportData value)? exportData,
     TResult Function(ClearAllData value)? clearAllData,
     TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
     required TResult orElse(),
   }) {
     if (loadSettings != null) {
@@ -373,6 +397,8 @@ class _$RefreshSettingsImpl implements RefreshSettings {
     required TResult Function() exportData,
     required TResult Function() clearAllData,
     required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
   }) {
     return refresh();
   }
@@ -393,6 +419,8 @@ class _$RefreshSettingsImpl implements RefreshSettings {
     TResult? Function()? exportData,
     TResult? Function()? clearAllData,
     TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
   }) {
     return refresh?.call();
   }
@@ -413,6 +441,8 @@ class _$RefreshSettingsImpl implements RefreshSettings {
     TResult Function()? exportData,
     TResult Function()? clearAllData,
     TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
     required TResult orElse(),
   }) {
     if (refresh != null) {
@@ -438,6 +468,8 @@ class _$RefreshSettingsImpl implements RefreshSettings {
     required TResult Function(ExportData value) exportData,
     required TResult Function(ClearAllData value) clearAllData,
     required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
   }) {
     return refresh(this);
   }
@@ -458,6 +490,8 @@ class _$RefreshSettingsImpl implements RefreshSettings {
     TResult? Function(ExportData value)? exportData,
     TResult? Function(ClearAllData value)? clearAllData,
     TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
   }) {
     return refresh?.call(this);
   }
@@ -478,6 +512,8 @@ class _$RefreshSettingsImpl implements RefreshSettings {
     TResult Function(ExportData value)? exportData,
     TResult Function(ClearAllData value)? clearAllData,
     TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
     required TResult orElse(),
   }) {
     if (refresh != null) {
@@ -574,6 +610,8 @@ class _$UpdateWeightImpl implements UpdateWeight {
     required TResult Function() exportData,
     required TResult Function() clearAllData,
     required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
   }) {
     return updateWeight(weightKg);
   }
@@ -594,6 +632,8 @@ class _$UpdateWeightImpl implements UpdateWeight {
     TResult? Function()? exportData,
     TResult? Function()? clearAllData,
     TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
   }) {
     return updateWeight?.call(weightKg);
   }
@@ -614,6 +654,8 @@ class _$UpdateWeightImpl implements UpdateWeight {
     TResult Function()? exportData,
     TResult Function()? clearAllData,
     TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
     required TResult orElse(),
   }) {
     if (updateWeight != null) {
@@ -639,6 +681,8 @@ class _$UpdateWeightImpl implements UpdateWeight {
     required TResult Function(ExportData value) exportData,
     required TResult Function(ClearAllData value) clearAllData,
     required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
   }) {
     return updateWeight(this);
   }
@@ -659,6 +703,8 @@ class _$UpdateWeightImpl implements UpdateWeight {
     TResult? Function(ExportData value)? exportData,
     TResult? Function(ClearAllData value)? clearAllData,
     TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
   }) {
     return updateWeight?.call(this);
   }
@@ -679,6 +725,8 @@ class _$UpdateWeightImpl implements UpdateWeight {
     TResult Function(ExportData value)? exportData,
     TResult Function(ClearAllData value)? clearAllData,
     TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
     required TResult orElse(),
   }) {
     if (updateWeight != null) {
@@ -785,6 +833,8 @@ class _$UpdateTargetWeightImpl implements UpdateTargetWeight {
     required TResult Function() exportData,
     required TResult Function() clearAllData,
     required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
   }) {
     return updateTargetWeight(targetWeightKg);
   }
@@ -805,6 +855,8 @@ class _$UpdateTargetWeightImpl implements UpdateTargetWeight {
     TResult? Function()? exportData,
     TResult? Function()? clearAllData,
     TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
   }) {
     return updateTargetWeight?.call(targetWeightKg);
   }
@@ -825,6 +877,8 @@ class _$UpdateTargetWeightImpl implements UpdateTargetWeight {
     TResult Function()? exportData,
     TResult Function()? clearAllData,
     TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
     required TResult orElse(),
   }) {
     if (updateTargetWeight != null) {
@@ -850,6 +904,8 @@ class _$UpdateTargetWeightImpl implements UpdateTargetWeight {
     required TResult Function(ExportData value) exportData,
     required TResult Function(ClearAllData value) clearAllData,
     required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
   }) {
     return updateTargetWeight(this);
   }
@@ -870,6 +926,8 @@ class _$UpdateTargetWeightImpl implements UpdateTargetWeight {
     TResult? Function(ExportData value)? exportData,
     TResult? Function(ClearAllData value)? clearAllData,
     TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
   }) {
     return updateTargetWeight?.call(this);
   }
@@ -890,6 +948,8 @@ class _$UpdateTargetWeightImpl implements UpdateTargetWeight {
     TResult Function(ExportData value)? exportData,
     TResult Function(ClearAllData value)? clearAllData,
     TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
     required TResult orElse(),
   }) {
     if (updateTargetWeight != null) {
@@ -995,6 +1055,8 @@ class _$UpdateHeightImpl implements UpdateHeight {
     required TResult Function() exportData,
     required TResult Function() clearAllData,
     required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
   }) {
     return updateHeight(heightCm);
   }
@@ -1015,6 +1077,8 @@ class _$UpdateHeightImpl implements UpdateHeight {
     TResult? Function()? exportData,
     TResult? Function()? clearAllData,
     TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
   }) {
     return updateHeight?.call(heightCm);
   }
@@ -1035,6 +1099,8 @@ class _$UpdateHeightImpl implements UpdateHeight {
     TResult Function()? exportData,
     TResult Function()? clearAllData,
     TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
     required TResult orElse(),
   }) {
     if (updateHeight != null) {
@@ -1060,6 +1126,8 @@ class _$UpdateHeightImpl implements UpdateHeight {
     required TResult Function(ExportData value) exportData,
     required TResult Function(ClearAllData value) clearAllData,
     required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
   }) {
     return updateHeight(this);
   }
@@ -1080,6 +1148,8 @@ class _$UpdateHeightImpl implements UpdateHeight {
     TResult? Function(ExportData value)? exportData,
     TResult? Function(ClearAllData value)? clearAllData,
     TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
   }) {
     return updateHeight?.call(this);
   }
@@ -1100,6 +1170,8 @@ class _$UpdateHeightImpl implements UpdateHeight {
     TResult Function(ExportData value)? exportData,
     TResult Function(ClearAllData value)? clearAllData,
     TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
     required TResult orElse(),
   }) {
     if (updateHeight != null) {
@@ -1205,6 +1277,8 @@ class _$UpdateActivityLevelImpl implements UpdateActivityLevel {
     required TResult Function() exportData,
     required TResult Function() clearAllData,
     required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
   }) {
     return updateActivityLevel(level);
   }
@@ -1225,6 +1299,8 @@ class _$UpdateActivityLevelImpl implements UpdateActivityLevel {
     TResult? Function()? exportData,
     TResult? Function()? clearAllData,
     TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
   }) {
     return updateActivityLevel?.call(level);
   }
@@ -1245,6 +1321,8 @@ class _$UpdateActivityLevelImpl implements UpdateActivityLevel {
     TResult Function()? exportData,
     TResult Function()? clearAllData,
     TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
     required TResult orElse(),
   }) {
     if (updateActivityLevel != null) {
@@ -1270,6 +1348,8 @@ class _$UpdateActivityLevelImpl implements UpdateActivityLevel {
     required TResult Function(ExportData value) exportData,
     required TResult Function(ClearAllData value) clearAllData,
     required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
   }) {
     return updateActivityLevel(this);
   }
@@ -1290,6 +1370,8 @@ class _$UpdateActivityLevelImpl implements UpdateActivityLevel {
     TResult? Function(ExportData value)? exportData,
     TResult? Function(ClearAllData value)? clearAllData,
     TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
   }) {
     return updateActivityLevel?.call(this);
   }
@@ -1310,6 +1392,8 @@ class _$UpdateActivityLevelImpl implements UpdateActivityLevel {
     TResult Function(ExportData value)? exportData,
     TResult Function(ClearAllData value)? clearAllData,
     TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
     required TResult orElse(),
   }) {
     if (updateActivityLevel != null) {
@@ -1415,6 +1499,8 @@ class _$UpdateWakeTimeImpl implements UpdateWakeTime {
     required TResult Function() exportData,
     required TResult Function() clearAllData,
     required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
   }) {
     return updateWakeTime(time);
   }
@@ -1435,6 +1521,8 @@ class _$UpdateWakeTimeImpl implements UpdateWakeTime {
     TResult? Function()? exportData,
     TResult? Function()? clearAllData,
     TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
   }) {
     return updateWakeTime?.call(time);
   }
@@ -1455,6 +1543,8 @@ class _$UpdateWakeTimeImpl implements UpdateWakeTime {
     TResult Function()? exportData,
     TResult Function()? clearAllData,
     TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
     required TResult orElse(),
   }) {
     if (updateWakeTime != null) {
@@ -1480,6 +1570,8 @@ class _$UpdateWakeTimeImpl implements UpdateWakeTime {
     required TResult Function(ExportData value) exportData,
     required TResult Function(ClearAllData value) clearAllData,
     required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
   }) {
     return updateWakeTime(this);
   }
@@ -1500,6 +1592,8 @@ class _$UpdateWakeTimeImpl implements UpdateWakeTime {
     TResult? Function(ExportData value)? exportData,
     TResult? Function(ClearAllData value)? clearAllData,
     TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
   }) {
     return updateWakeTime?.call(this);
   }
@@ -1520,6 +1614,8 @@ class _$UpdateWakeTimeImpl implements UpdateWakeTime {
     TResult Function(ExportData value)? exportData,
     TResult Function(ClearAllData value)? clearAllData,
     TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
     required TResult orElse(),
   }) {
     if (updateWakeTime != null) {
@@ -1626,6 +1722,8 @@ class _$UpdateAmbitionImpl implements UpdateAmbition {
     required TResult Function() exportData,
     required TResult Function() clearAllData,
     required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
   }) {
     return updateAmbition(ambition);
   }
@@ -1646,6 +1744,8 @@ class _$UpdateAmbitionImpl implements UpdateAmbition {
     TResult? Function()? exportData,
     TResult? Function()? clearAllData,
     TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
   }) {
     return updateAmbition?.call(ambition);
   }
@@ -1666,6 +1766,8 @@ class _$UpdateAmbitionImpl implements UpdateAmbition {
     TResult Function()? exportData,
     TResult Function()? clearAllData,
     TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
     required TResult orElse(),
   }) {
     if (updateAmbition != null) {
@@ -1691,6 +1793,8 @@ class _$UpdateAmbitionImpl implements UpdateAmbition {
     required TResult Function(ExportData value) exportData,
     required TResult Function(ClearAllData value) clearAllData,
     required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
   }) {
     return updateAmbition(this);
   }
@@ -1711,6 +1815,8 @@ class _$UpdateAmbitionImpl implements UpdateAmbition {
     TResult? Function(ExportData value)? exportData,
     TResult? Function(ClearAllData value)? clearAllData,
     TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
   }) {
     return updateAmbition?.call(this);
   }
@@ -1731,6 +1837,8 @@ class _$UpdateAmbitionImpl implements UpdateAmbition {
     TResult Function(ExportData value)? exportData,
     TResult Function(ClearAllData value)? clearAllData,
     TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
     required TResult orElse(),
   }) {
     if (updateAmbition != null) {
@@ -1848,6 +1956,8 @@ class _$UpdateNotificationsImpl implements UpdateNotifications {
     required TResult Function() exportData,
     required TResult Function() clearAllData,
     required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
   }) {
     return updateNotifications(prefs);
   }
@@ -1868,6 +1978,8 @@ class _$UpdateNotificationsImpl implements UpdateNotifications {
     TResult? Function()? exportData,
     TResult? Function()? clearAllData,
     TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
   }) {
     return updateNotifications?.call(prefs);
   }
@@ -1888,6 +2000,8 @@ class _$UpdateNotificationsImpl implements UpdateNotifications {
     TResult Function()? exportData,
     TResult Function()? clearAllData,
     TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
     required TResult orElse(),
   }) {
     if (updateNotifications != null) {
@@ -1913,6 +2027,8 @@ class _$UpdateNotificationsImpl implements UpdateNotifications {
     required TResult Function(ExportData value) exportData,
     required TResult Function(ClearAllData value) clearAllData,
     required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
   }) {
     return updateNotifications(this);
   }
@@ -1933,6 +2049,8 @@ class _$UpdateNotificationsImpl implements UpdateNotifications {
     TResult? Function(ExportData value)? exportData,
     TResult? Function(ClearAllData value)? clearAllData,
     TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
   }) {
     return updateNotifications?.call(this);
   }
@@ -1953,6 +2071,8 @@ class _$UpdateNotificationsImpl implements UpdateNotifications {
     TResult Function(ExportData value)? exportData,
     TResult Function(ClearAllData value)? clearAllData,
     TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
     required TResult orElse(),
   }) {
     if (updateNotifications != null) {
@@ -2034,6 +2154,8 @@ class _$RequestHealthPermissionsImpl implements RequestHealthPermissions {
     required TResult Function() exportData,
     required TResult Function() clearAllData,
     required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
   }) {
     return requestHealthPermissions();
   }
@@ -2054,6 +2176,8 @@ class _$RequestHealthPermissionsImpl implements RequestHealthPermissions {
     TResult? Function()? exportData,
     TResult? Function()? clearAllData,
     TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
   }) {
     return requestHealthPermissions?.call();
   }
@@ -2074,6 +2198,8 @@ class _$RequestHealthPermissionsImpl implements RequestHealthPermissions {
     TResult Function()? exportData,
     TResult Function()? clearAllData,
     TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
     required TResult orElse(),
   }) {
     if (requestHealthPermissions != null) {
@@ -2099,6 +2225,8 @@ class _$RequestHealthPermissionsImpl implements RequestHealthPermissions {
     required TResult Function(ExportData value) exportData,
     required TResult Function(ClearAllData value) clearAllData,
     required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
   }) {
     return requestHealthPermissions(this);
   }
@@ -2119,6 +2247,8 @@ class _$RequestHealthPermissionsImpl implements RequestHealthPermissions {
     TResult? Function(ExportData value)? exportData,
     TResult? Function(ClearAllData value)? clearAllData,
     TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
   }) {
     return requestHealthPermissions?.call(this);
   }
@@ -2139,6 +2269,8 @@ class _$RequestHealthPermissionsImpl implements RequestHealthPermissions {
     TResult Function(ExportData value)? exportData,
     TResult Function(ClearAllData value)? clearAllData,
     TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
     required TResult orElse(),
   }) {
     if (requestHealthPermissions != null) {
@@ -2207,6 +2339,8 @@ class _$ExportDataImpl implements ExportData {
     required TResult Function() exportData,
     required TResult Function() clearAllData,
     required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
   }) {
     return exportData();
   }
@@ -2227,6 +2361,8 @@ class _$ExportDataImpl implements ExportData {
     TResult? Function()? exportData,
     TResult? Function()? clearAllData,
     TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
   }) {
     return exportData?.call();
   }
@@ -2247,6 +2383,8 @@ class _$ExportDataImpl implements ExportData {
     TResult Function()? exportData,
     TResult Function()? clearAllData,
     TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
     required TResult orElse(),
   }) {
     if (exportData != null) {
@@ -2272,6 +2410,8 @@ class _$ExportDataImpl implements ExportData {
     required TResult Function(ExportData value) exportData,
     required TResult Function(ClearAllData value) clearAllData,
     required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
   }) {
     return exportData(this);
   }
@@ -2292,6 +2432,8 @@ class _$ExportDataImpl implements ExportData {
     TResult? Function(ExportData value)? exportData,
     TResult? Function(ClearAllData value)? clearAllData,
     TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
   }) {
     return exportData?.call(this);
   }
@@ -2312,6 +2454,8 @@ class _$ExportDataImpl implements ExportData {
     TResult Function(ExportData value)? exportData,
     TResult Function(ClearAllData value)? clearAllData,
     TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
     required TResult orElse(),
   }) {
     if (exportData != null) {
@@ -2380,6 +2524,8 @@ class _$ClearAllDataImpl implements ClearAllData {
     required TResult Function() exportData,
     required TResult Function() clearAllData,
     required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
   }) {
     return clearAllData();
   }
@@ -2400,6 +2546,8 @@ class _$ClearAllDataImpl implements ClearAllData {
     TResult? Function()? exportData,
     TResult? Function()? clearAllData,
     TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
   }) {
     return clearAllData?.call();
   }
@@ -2420,6 +2568,8 @@ class _$ClearAllDataImpl implements ClearAllData {
     TResult Function()? exportData,
     TResult Function()? clearAllData,
     TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
     required TResult orElse(),
   }) {
     if (clearAllData != null) {
@@ -2445,6 +2595,8 @@ class _$ClearAllDataImpl implements ClearAllData {
     required TResult Function(ExportData value) exportData,
     required TResult Function(ClearAllData value) clearAllData,
     required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
   }) {
     return clearAllData(this);
   }
@@ -2465,6 +2617,8 @@ class _$ClearAllDataImpl implements ClearAllData {
     TResult? Function(ExportData value)? exportData,
     TResult? Function(ClearAllData value)? clearAllData,
     TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
   }) {
     return clearAllData?.call(this);
   }
@@ -2485,6 +2639,8 @@ class _$ClearAllDataImpl implements ClearAllData {
     TResult Function(ExportData value)? exportData,
     TResult Function(ClearAllData value)? clearAllData,
     TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
     required TResult orElse(),
   }) {
     if (clearAllData != null) {
@@ -2553,6 +2709,8 @@ class _$ClearMessageImpl implements ClearMessage {
     required TResult Function() exportData,
     required TResult Function() clearAllData,
     required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
   }) {
     return clearMessage();
   }
@@ -2573,6 +2731,8 @@ class _$ClearMessageImpl implements ClearMessage {
     TResult? Function()? exportData,
     TResult? Function()? clearAllData,
     TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
   }) {
     return clearMessage?.call();
   }
@@ -2593,6 +2753,8 @@ class _$ClearMessageImpl implements ClearMessage {
     TResult Function()? exportData,
     TResult Function()? clearAllData,
     TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
     required TResult orElse(),
   }) {
     if (clearMessage != null) {
@@ -2618,6 +2780,8 @@ class _$ClearMessageImpl implements ClearMessage {
     required TResult Function(ExportData value) exportData,
     required TResult Function(ClearAllData value) clearAllData,
     required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
   }) {
     return clearMessage(this);
   }
@@ -2638,6 +2802,8 @@ class _$ClearMessageImpl implements ClearMessage {
     TResult? Function(ExportData value)? exportData,
     TResult? Function(ClearAllData value)? clearAllData,
     TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
   }) {
     return clearMessage?.call(this);
   }
@@ -2658,6 +2824,8 @@ class _$ClearMessageImpl implements ClearMessage {
     TResult Function(ExportData value)? exportData,
     TResult Function(ClearAllData value)? clearAllData,
     TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
     required TResult orElse(),
   }) {
     if (clearMessage != null) {
@@ -2669,4 +2837,374 @@ class _$ClearMessageImpl implements ClearMessage {
 
 abstract class ClearMessage implements SettingsEvent {
   const factory ClearMessage() = _$ClearMessageImpl;
+}
+
+/// @nodoc
+abstract class _$$SignOutImplCopyWith<$Res> {
+  factory _$$SignOutImplCopyWith(
+          _$SignOutImpl value, $Res Function(_$SignOutImpl) then) =
+      __$$SignOutImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SignOutImplCopyWithImpl<$Res>
+    extends _$SettingsEventCopyWithImpl<$Res, _$SignOutImpl>
+    implements _$$SignOutImplCopyWith<$Res> {
+  __$$SignOutImplCopyWithImpl(
+      _$SignOutImpl _value, $Res Function(_$SignOutImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SettingsEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$SignOutImpl implements SignOut {
+  const _$SignOutImpl();
+
+  @override
+  String toString() {
+    return 'SettingsEvent.signOut()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SignOutImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loadSettings,
+    required TResult Function() refresh,
+    required TResult Function(double weightKg) updateWeight,
+    required TResult Function(double targetWeightKg) updateTargetWeight,
+    required TResult Function(double heightCm) updateHeight,
+    required TResult Function(String level) updateActivityLevel,
+    required TResult Function(TimeOfDay time) updateWakeTime,
+    required TResult Function(String ambition) updateAmbition,
+    required TResult Function(NotificationPreferences prefs)
+        updateNotifications,
+    required TResult Function() requestHealthPermissions,
+    required TResult Function() exportData,
+    required TResult Function() clearAllData,
+    required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
+  }) {
+    return signOut();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loadSettings,
+    TResult? Function()? refresh,
+    TResult? Function(double weightKg)? updateWeight,
+    TResult? Function(double targetWeightKg)? updateTargetWeight,
+    TResult? Function(double heightCm)? updateHeight,
+    TResult? Function(String level)? updateActivityLevel,
+    TResult? Function(TimeOfDay time)? updateWakeTime,
+    TResult? Function(String ambition)? updateAmbition,
+    TResult? Function(NotificationPreferences prefs)? updateNotifications,
+    TResult? Function()? requestHealthPermissions,
+    TResult? Function()? exportData,
+    TResult? Function()? clearAllData,
+    TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
+  }) {
+    return signOut?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loadSettings,
+    TResult Function()? refresh,
+    TResult Function(double weightKg)? updateWeight,
+    TResult Function(double targetWeightKg)? updateTargetWeight,
+    TResult Function(double heightCm)? updateHeight,
+    TResult Function(String level)? updateActivityLevel,
+    TResult Function(TimeOfDay time)? updateWakeTime,
+    TResult Function(String ambition)? updateAmbition,
+    TResult Function(NotificationPreferences prefs)? updateNotifications,
+    TResult Function()? requestHealthPermissions,
+    TResult Function()? exportData,
+    TResult Function()? clearAllData,
+    TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
+    required TResult orElse(),
+  }) {
+    if (signOut != null) {
+      return signOut();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(LoadSettings value) loadSettings,
+    required TResult Function(RefreshSettings value) refresh,
+    required TResult Function(UpdateWeight value) updateWeight,
+    required TResult Function(UpdateTargetWeight value) updateTargetWeight,
+    required TResult Function(UpdateHeight value) updateHeight,
+    required TResult Function(UpdateActivityLevel value) updateActivityLevel,
+    required TResult Function(UpdateWakeTime value) updateWakeTime,
+    required TResult Function(UpdateAmbition value) updateAmbition,
+    required TResult Function(UpdateNotifications value) updateNotifications,
+    required TResult Function(RequestHealthPermissions value)
+        requestHealthPermissions,
+    required TResult Function(ExportData value) exportData,
+    required TResult Function(ClearAllData value) clearAllData,
+    required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
+  }) {
+    return signOut(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(LoadSettings value)? loadSettings,
+    TResult? Function(RefreshSettings value)? refresh,
+    TResult? Function(UpdateWeight value)? updateWeight,
+    TResult? Function(UpdateTargetWeight value)? updateTargetWeight,
+    TResult? Function(UpdateHeight value)? updateHeight,
+    TResult? Function(UpdateActivityLevel value)? updateActivityLevel,
+    TResult? Function(UpdateWakeTime value)? updateWakeTime,
+    TResult? Function(UpdateAmbition value)? updateAmbition,
+    TResult? Function(UpdateNotifications value)? updateNotifications,
+    TResult? Function(RequestHealthPermissions value)? requestHealthPermissions,
+    TResult? Function(ExportData value)? exportData,
+    TResult? Function(ClearAllData value)? clearAllData,
+    TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
+  }) {
+    return signOut?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(LoadSettings value)? loadSettings,
+    TResult Function(RefreshSettings value)? refresh,
+    TResult Function(UpdateWeight value)? updateWeight,
+    TResult Function(UpdateTargetWeight value)? updateTargetWeight,
+    TResult Function(UpdateHeight value)? updateHeight,
+    TResult Function(UpdateActivityLevel value)? updateActivityLevel,
+    TResult Function(UpdateWakeTime value)? updateWakeTime,
+    TResult Function(UpdateAmbition value)? updateAmbition,
+    TResult Function(UpdateNotifications value)? updateNotifications,
+    TResult Function(RequestHealthPermissions value)? requestHealthPermissions,
+    TResult Function(ExportData value)? exportData,
+    TResult Function(ClearAllData value)? clearAllData,
+    TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
+    required TResult orElse(),
+  }) {
+    if (signOut != null) {
+      return signOut(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignOut implements SettingsEvent {
+  const factory SignOut() = _$SignOutImpl;
+}
+
+/// @nodoc
+abstract class _$$DeleteAccountImplCopyWith<$Res> {
+  factory _$$DeleteAccountImplCopyWith(
+          _$DeleteAccountImpl value, $Res Function(_$DeleteAccountImpl) then) =
+      __$$DeleteAccountImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DeleteAccountImplCopyWithImpl<$Res>
+    extends _$SettingsEventCopyWithImpl<$Res, _$DeleteAccountImpl>
+    implements _$$DeleteAccountImplCopyWith<$Res> {
+  __$$DeleteAccountImplCopyWithImpl(
+      _$DeleteAccountImpl _value, $Res Function(_$DeleteAccountImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SettingsEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$DeleteAccountImpl implements DeleteAccount {
+  const _$DeleteAccountImpl();
+
+  @override
+  String toString() {
+    return 'SettingsEvent.deleteAccount()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$DeleteAccountImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loadSettings,
+    required TResult Function() refresh,
+    required TResult Function(double weightKg) updateWeight,
+    required TResult Function(double targetWeightKg) updateTargetWeight,
+    required TResult Function(double heightCm) updateHeight,
+    required TResult Function(String level) updateActivityLevel,
+    required TResult Function(TimeOfDay time) updateWakeTime,
+    required TResult Function(String ambition) updateAmbition,
+    required TResult Function(NotificationPreferences prefs)
+        updateNotifications,
+    required TResult Function() requestHealthPermissions,
+    required TResult Function() exportData,
+    required TResult Function() clearAllData,
+    required TResult Function() clearMessage,
+    required TResult Function() signOut,
+    required TResult Function() deleteAccount,
+  }) {
+    return deleteAccount();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loadSettings,
+    TResult? Function()? refresh,
+    TResult? Function(double weightKg)? updateWeight,
+    TResult? Function(double targetWeightKg)? updateTargetWeight,
+    TResult? Function(double heightCm)? updateHeight,
+    TResult? Function(String level)? updateActivityLevel,
+    TResult? Function(TimeOfDay time)? updateWakeTime,
+    TResult? Function(String ambition)? updateAmbition,
+    TResult? Function(NotificationPreferences prefs)? updateNotifications,
+    TResult? Function()? requestHealthPermissions,
+    TResult? Function()? exportData,
+    TResult? Function()? clearAllData,
+    TResult? Function()? clearMessage,
+    TResult? Function()? signOut,
+    TResult? Function()? deleteAccount,
+  }) {
+    return deleteAccount?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loadSettings,
+    TResult Function()? refresh,
+    TResult Function(double weightKg)? updateWeight,
+    TResult Function(double targetWeightKg)? updateTargetWeight,
+    TResult Function(double heightCm)? updateHeight,
+    TResult Function(String level)? updateActivityLevel,
+    TResult Function(TimeOfDay time)? updateWakeTime,
+    TResult Function(String ambition)? updateAmbition,
+    TResult Function(NotificationPreferences prefs)? updateNotifications,
+    TResult Function()? requestHealthPermissions,
+    TResult Function()? exportData,
+    TResult Function()? clearAllData,
+    TResult Function()? clearMessage,
+    TResult Function()? signOut,
+    TResult Function()? deleteAccount,
+    required TResult orElse(),
+  }) {
+    if (deleteAccount != null) {
+      return deleteAccount();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(LoadSettings value) loadSettings,
+    required TResult Function(RefreshSettings value) refresh,
+    required TResult Function(UpdateWeight value) updateWeight,
+    required TResult Function(UpdateTargetWeight value) updateTargetWeight,
+    required TResult Function(UpdateHeight value) updateHeight,
+    required TResult Function(UpdateActivityLevel value) updateActivityLevel,
+    required TResult Function(UpdateWakeTime value) updateWakeTime,
+    required TResult Function(UpdateAmbition value) updateAmbition,
+    required TResult Function(UpdateNotifications value) updateNotifications,
+    required TResult Function(RequestHealthPermissions value)
+        requestHealthPermissions,
+    required TResult Function(ExportData value) exportData,
+    required TResult Function(ClearAllData value) clearAllData,
+    required TResult Function(ClearMessage value) clearMessage,
+    required TResult Function(SignOut value) signOut,
+    required TResult Function(DeleteAccount value) deleteAccount,
+  }) {
+    return deleteAccount(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(LoadSettings value)? loadSettings,
+    TResult? Function(RefreshSettings value)? refresh,
+    TResult? Function(UpdateWeight value)? updateWeight,
+    TResult? Function(UpdateTargetWeight value)? updateTargetWeight,
+    TResult? Function(UpdateHeight value)? updateHeight,
+    TResult? Function(UpdateActivityLevel value)? updateActivityLevel,
+    TResult? Function(UpdateWakeTime value)? updateWakeTime,
+    TResult? Function(UpdateAmbition value)? updateAmbition,
+    TResult? Function(UpdateNotifications value)? updateNotifications,
+    TResult? Function(RequestHealthPermissions value)? requestHealthPermissions,
+    TResult? Function(ExportData value)? exportData,
+    TResult? Function(ClearAllData value)? clearAllData,
+    TResult? Function(ClearMessage value)? clearMessage,
+    TResult? Function(SignOut value)? signOut,
+    TResult? Function(DeleteAccount value)? deleteAccount,
+  }) {
+    return deleteAccount?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(LoadSettings value)? loadSettings,
+    TResult Function(RefreshSettings value)? refresh,
+    TResult Function(UpdateWeight value)? updateWeight,
+    TResult Function(UpdateTargetWeight value)? updateTargetWeight,
+    TResult Function(UpdateHeight value)? updateHeight,
+    TResult Function(UpdateActivityLevel value)? updateActivityLevel,
+    TResult Function(UpdateWakeTime value)? updateWakeTime,
+    TResult Function(UpdateAmbition value)? updateAmbition,
+    TResult Function(UpdateNotifications value)? updateNotifications,
+    TResult Function(RequestHealthPermissions value)? requestHealthPermissions,
+    TResult Function(ExportData value)? exportData,
+    TResult Function(ClearAllData value)? clearAllData,
+    TResult Function(ClearMessage value)? clearMessage,
+    TResult Function(SignOut value)? signOut,
+    TResult Function(DeleteAccount value)? deleteAccount,
+    required TResult orElse(),
+  }) {
+    if (deleteAccount != null) {
+      return deleteAccount(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DeleteAccount implements SettingsEvent {
+  const factory DeleteAccount() = _$DeleteAccountImpl;
 }

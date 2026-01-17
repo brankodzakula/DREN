@@ -4,6 +4,8 @@ import '../../app/di/injection.dart';
 import '../../core/theme/colors.dart';
 import '../../core/theme/typography.dart';
 import '../../core/theme/spacing.dart';
+import '../../core/services/firebase/auth_service.dart';
+import '../../features/auth/presentation/pages/login_page.dart';
 import '../../features/onboarding/domain/usecases/check_onboarding_complete.dart';
 import '../../features/onboarding/presentation/pages/onboarding_page.dart';
 import '../../features/today/presentation/pages/today_page.dart' as today;
@@ -64,6 +66,16 @@ class _SplashPageState extends State<SplashPage>
     if (!mounted) return;
 
     try {
+      // First check if user is authenticated
+      final authService = getIt<AuthService>();
+      if (!authService.isSignedIn) {
+        if (mounted) {
+          context.go(Routes.login);
+        }
+        return;
+      }
+
+      // If authenticated, check onboarding status
       final checkOnboarding = getIt<CheckOnboardingComplete>();
       final status = await checkOnboarding();
 
@@ -75,9 +87,9 @@ class _SplashPageState extends State<SplashPage>
         context.go(Routes.onboarding);
       }
     } catch (e) {
-      // If check fails, go to onboarding
+      // If check fails, go to login
       if (mounted) {
-        context.go(Routes.onboarding);
+        context.go(Routes.login);
       }
     }
   }
@@ -338,19 +350,41 @@ class SettingsPage extends StatelessWidget {
 final goRouter = GoRouter(
   initialLocation: Routes.splash,
   debugLogDiagnostics: true,
-  // Redirect to onboarding if not completed
+  // Redirect based on auth and onboarding status
   redirect: (context, state) async {
     final path = state.uri.path;
 
-    // Allow splash, onboarding, and debug routes without check
-    if (path == Routes.splash ||
-        path == Routes.onboarding ||
-        path == Routes.debug) {
+    // Allow splash and debug routes without check
+    if (path == Routes.splash || path == Routes.debug) {
       return null;
     }
 
+    // Check authentication
+    final authService = getIt<AuthService>();
+    final isAuthenticated = authService.isSignedIn;
+
+    // If not authenticated and trying to access protected routes
+    if (!isAuthenticated &&
+        path != Routes.login) {
+      return Routes.login;
+    }
+
+    // If authenticated and on login page, redirect to onboarding check
+    if (isAuthenticated && path == Routes.login) {
+      try {
+        final checkOnboarding = getIt<CheckOnboardingComplete>();
+        final status = await checkOnboarding();
+        if (status == OnboardingStatus.complete) {
+          return Routes.today;
+        }
+        return Routes.onboarding;
+      } catch (e) {
+        return Routes.onboarding;
+      }
+    }
+
     // For main routes, check if onboarding is complete
-    if (path.startsWith('/main')) {
+    if (isAuthenticated && path.startsWith('/main')) {
       try {
         final checkOnboarding = getIt<CheckOnboardingComplete>();
         final status = await checkOnboarding();
@@ -358,7 +392,7 @@ final goRouter = GoRouter(
           return Routes.onboarding;
         }
       } catch (e) {
-        // If check fails, allow navigation but splash will handle redirect
+        // If check fails, allow navigation
         return null;
       }
     }
@@ -369,6 +403,10 @@ final goRouter = GoRouter(
     GoRoute(
       path: Routes.splash,
       builder: (context, state) => const SplashPage(),
+    ),
+    GoRoute(
+      path: Routes.login,
+      builder: (context, state) => const LoginPage(),
     ),
     GoRoute(
       path: Routes.onboarding,

@@ -31,6 +31,7 @@ import '../../core/services/health_service.dart' as _i894;
 import '../../core/services/health_sync_service.dart' as _i357;
 import '../../core/services/network/network_module.dart' as _i504;
 import '../../core/services/secure_storage_service.dart' as _i814;
+import '../../features/auth/presentation/bloc/auth_bloc.dart' as _i797;
 import '../../features/diet/data/datasources/food_cache.dart' as _i232;
 import '../../features/diet/data/datasources/local_food_datasource.dart'
     as _i577;
@@ -147,6 +148,18 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i505.OpenFoodFactsDataSource(gh<_i361.Dio>()));
     gh.factory<_i825.UsdaDataSource>(
         () => _i825.UsdaDataSource(gh<_i361.Dio>()));
+    gh.factory<_i797.AuthBloc>(() => _i797.AuthBloc(
+          gh<_i107.AuthService>(),
+          gh<_i734.AnalyticsService>(),
+          gh<_i227.FirestoreService>(),
+        ));
+    gh.lazySingleton<_i674.SettingsRepository>(
+        () => _i955.SettingsRepositoryImpl(
+              gh<_i1017.AppDatabase>(),
+              gh<_i814.SecureStorageService>(),
+              gh<_i227.FirestoreService>(),
+              gh<_i107.AuthService>(),
+            ));
     gh.singleton<_i141.UserProfileDao>(
         () => databaseModule.userProfileDao(gh<_i1017.AppDatabase>()));
     gh.singleton<_i441.DailyProtocolDao>(
@@ -163,15 +176,17 @@ extension GetItInjectableX on _i174.GetIt {
         () => databaseModule.workoutDao(gh<_i1017.AppDatabase>()));
     gh.singleton<_i50.DailyProgressDao>(
         () => databaseModule.dailyProgressDao(gh<_i1017.AppDatabase>()));
-    gh.lazySingleton<_i674.SettingsRepository>(
-        () => _i955.SettingsRepositoryImpl(
-              gh<_i1017.AppDatabase>(),
-              gh<_i814.SecureStorageService>(),
-            ));
     gh.lazySingleton<_i327.WorkoutSessionDataSource>(() =>
         _i327.WorkoutSessionDataSourceImpl(gh<_i901.WorkoutSessionDao>()));
     gh.factory<_i577.LocalFoodDataSource>(
         () => _i577.LocalFoodDataSource(gh<_i1017.AppDatabase>()));
+    gh.lazySingleton<_i430.OnboardingRepository>(
+        () => _i452.OnboardingRepositoryImpl(
+              gh<_i141.UserProfileDao>(),
+              gh<_i814.SecureStorageService>(),
+              gh<_i227.FirestoreService>(),
+              gh<_i107.AuthService>(),
+            ));
     gh.factory<_i969.GenerateDailyProtocol>(
         () => _i969.GenerateDailyProtocol(gh<_i239.GenerateSleepSchedule>()));
     gh.lazySingleton<_i880.DietRepository>(() => _i905.DietRepositoryImpl(
@@ -199,6 +214,11 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i489.UpdateAmbition(gh<_i674.SettingsRepository>()));
     gh.factory<_i345.GetDailyProgress>(
         () => _i345.GetDailyProgress(gh<_i160.TodayRepository>()));
+    gh.factory<_i276.GetTodayProtocol>(() => _i276.GetTodayProtocol(
+          gh<_i160.TodayRepository>(),
+          gh<_i430.OnboardingRepository>(),
+          gh<_i969.GenerateDailyProtocol>(),
+        ));
     gh.lazySingleton<_i266.SleepLocalDataSource>(
         () => _i266.SleepLocalDataSource(gh<_i487.SleepSessionDao>()));
     gh.factory<_i486.LogWorkoutSession>(
@@ -213,11 +233,16 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i591.LogWorkoutSession>(),
           gh<_i357.HealthSyncService>(),
         ));
-    gh.lazySingleton<_i430.OnboardingRepository>(
-        () => _i452.OnboardingRepositoryImpl(
-              gh<_i141.UserProfileDao>(),
-              gh<_i814.SecureStorageService>(),
-            ));
+    gh.factory<_i585.SettingsBloc>(() => _i585.SettingsBloc(
+          gh<_i775.GetUserSettings>(),
+          gh<_i93.UpdateProfile>(),
+          gh<_i489.UpdateAmbition>(),
+          gh<_i799.ManageData>(),
+          gh<_i674.SettingsRepository>(),
+          gh<_i894.HealthService>(),
+          gh<_i107.AuthService>(),
+          gh<_i734.AnalyticsService>(),
+        ));
     gh.factory<_i489.GetMealsForDate>(
         () => _i489.GetMealsForDate(gh<_i880.DietRepository>()));
     gh.factory<_i788.GetRecipes>(
@@ -229,14 +254,6 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i9.CheckOnboardingComplete(gh<_i430.OnboardingRepository>()));
     gh.factory<_i531.SaveUserProfile>(
         () => _i531.SaveUserProfile(gh<_i430.OnboardingRepository>()));
-    gh.factory<_i585.SettingsBloc>(() => _i585.SettingsBloc(
-          gh<_i775.GetUserSettings>(),
-          gh<_i93.UpdateProfile>(),
-          gh<_i489.UpdateAmbition>(),
-          gh<_i799.ManageData>(),
-          gh<_i674.SettingsRepository>(),
-          gh<_i894.HealthService>(),
-        ));
     gh.factory<_i536.DietBloc>(() => _i536.DietBloc(
           gh<_i652.SearchFood>(),
           gh<_i622.LogMeal>(),
@@ -248,10 +265,11 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i531.SaveUserProfile>(),
           gh<_i9.CheckOnboardingComplete>(),
         ));
-    gh.factory<_i276.GetTodayProtocol>(() => _i276.GetTodayProtocol(
+    gh.factory<_i63.TodayBloc>(() => _i63.TodayBloc(
+          gh<_i345.GetDailyProgress>(),
+          gh<_i276.GetTodayProtocol>(),
           gh<_i160.TodayRepository>(),
-          gh<_i430.OnboardingRepository>(),
-          gh<_i969.GenerateDailyProtocol>(),
+          gh<_i357.HealthSyncService>(),
         ));
     gh.lazySingleton<_i1011.SleepRepository>(() => _i547.SleepRepositoryImpl(
           gh<_i266.SleepLocalDataSource>(),
@@ -276,12 +294,6 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i744.LogSleepHabits>(),
           gh<_i54.GetMeditations>(),
           gh<_i704.GetSleepHistory>(),
-          gh<_i357.HealthSyncService>(),
-        ));
-    gh.factory<_i63.TodayBloc>(() => _i63.TodayBloc(
-          gh<_i345.GetDailyProgress>(),
-          gh<_i276.GetTodayProtocol>(),
-          gh<_i160.TodayRepository>(),
           gh<_i357.HealthSyncService>(),
         ));
     return this;
